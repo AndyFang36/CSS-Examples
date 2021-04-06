@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+article {
+  width: 34em;
+}
+
+div {
+  background-color: RGBa(0, 0, 0, 0.1);
+  font-family: monospace;
+}
+
+article > div {
+  display: flex;
+  border: 1px dashed;
+  padding: 10px;
+}
+
+div > div {
+  border: 1px solid;
+  margin: 10px;
+  padding: 0.5em 1em;
+}
+
+p {
+  margin-top: 0;
+}

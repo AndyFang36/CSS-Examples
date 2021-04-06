@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Relative Sizes</title>
+    <style>
+      body {
+        font-size: 100px;
+      }
+
+      hr {
+        width: 100%;
+        height: 0.1rem;
+        margin: 2rem auto;
+        border: 0;
+        background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+      }
+
+      p {
+        font-size: 0.5em;
+      }
+
+      em {
+        font-size: 120%;
+        color: red;
+      }
+
+      strong {
+        font-size: 135%;
+        color: red;
+      }
+
+      small, .footnote {
+        font-size: 0.6em;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    Out of the paragraph. (100px)
+    <hr/>
+    <p>
+      This paragraph contains both <em>emphasis</em> and <strong>strong emphasis</strong>, both of which are larger than
+      their parent element. The <small>small text</small>, on the other hand, is smaller by a quarter.<span
+      class="footnote">This is a 'footnote' and is smaller than regular text. (30px)</span>
+    </p>
+    <hr/>
+    <p>50px <em>60px</em> 50px <strong>67.5px</strong> 50px <small>30px</small> 50px</p>
+    <hr/>
+    <p class="footnote"> 60px</p>
+  </body>
+</html>

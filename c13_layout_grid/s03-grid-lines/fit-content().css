@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3em;
+  background-color: lightskyblue;
+}
+
+/* Grouping */
+html > body {
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body > section {
+  width: auto;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: whitesmoke;
+}
+
+/* Heading */
+html > body h1 {
+  font-size: 3em
+}
+
+html > body h2 {
+  font-size: 2.4em
+}
+
+html > body h3 {
+  font-size: 1.92em
+}
+
+html > body h4 {
+  font-size: 1.536em
+}
+
+html > body h5 {
+  font-size: 1.2288em
+}
+
+html > body h6 {
+  font-size: 0.98304em
+}
+
+
+/* Others*/
+section > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.grid_container {
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  background-color: #96DB93;
+}
+
+.grid_container > .grid_item {
+  position: relative;
+  border: thin dashed red;
+  font-family: monospace;
+  background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+.grid_container > .grid_item > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+
+/* Sizing Grid Tracks with fit-content() */
+section#first > .grid_container,
+section#second > .grid_container {
+  grid-template-rows:
+    [start]
+    1fr
+    [start];
+  grid-template-columns: [] fit-content(38ch) [] fit-content(38ch) [] fit-content(38ch) [];
+}
+
+
+/* Fitting to wide content */
+section#second > .grid_container > .grid_item > img {
+  display: block;
+  width: 380px;
+  height: 5rem;
+}

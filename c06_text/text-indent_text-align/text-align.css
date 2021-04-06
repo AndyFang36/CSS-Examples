@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+html {
+  background-color: dimgray;
+}
+
+html > body {
+  padding: 1em;
+  background-color: whitesmoke;
+}
+
+div[lang|="en"] {
+  width: 500px;
+}
+
+html > body > hr {
+  width: auto;
+  height: 0.1em;
+  margin: 2em auto;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+
+/* lang="en" */
+p[lang|="en"] {
+  border: 2px solid #FF0000;
+}
+
+p[lang|="en"].start {
+  text-align: start;
+}
+
+p[lang|="en"].end {
+  text-align: end;
+}
+
+p[lang|="en"].left {
+  text-align: left;
+}
+
+p[lang|="en"].right {
+  text-align: right;
+}
+
+p[lang|="en"].center {
+  text-align: center;
+}
+
+p[lang|="en"].justify {
+  text-align: justify;
+}
+
+
+/* lang="jp" */
+div[lang|="jp"] {
+  margin: 1ch auto;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: repeat(2, min-content);
+  grid-gap: 0 5ch;
+}
+
+p[lang|="jp"] {
+  border: 2px dotted #0ADE96;
+  line-height: 1;
+  padding: 0.5em;
+  height: 13em;
+  direction: rtl;
+  writing-mode: vertical-lr;
+}
+
+p[lang|="jp"].left {
+  text-align: left;
+}
+
+p[lang|="jp"].right {
+  text-align: right;
+}
+
+p[lang|="jp"].center {
+  text-align: center;
+}
+
+strong {
+  text-align: center;
+  font: 1.33em 'Arvo', sans-serif;
+  margin-top: 1ch;
+}
+
+
+/* start-end */
+#start-end p {
+  border: 2px dashed #0022FF;
+  float: left;
+  margin-left: 2em;
+  width: 400px;
+}
+
+#start-end p[lang] {
+  direction: rtl;
+}
+
+#start-end p[lang="ar"] {
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.cl1 {
+  text-align: start;
+}
+
+.cl2 {
+  text-align: end;
+}
+
+.cl2 {
+  clear: left;
+}
+
+.cl2 + .cl2 {
+  clear: none;
+}
+
+
+/* text-align-last */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  text-align: center;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+  border-style: solid;
+}
+
+td.start {
+  text-align-last: start;
+}
+
+td.end {
+  text-align-last: end;
+}
+
+td.left {
+  text-align-last: left;
+}
+
+td.right {
+  text-align-last: right;
+}
+
+td.center {
+  text-align-last: center;
+}

@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3em;
+  background-color: gray;
+}
+
+
+/* Grouping */
+html > body {
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body > section {
+  width: auto;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: whitesmoke;
+}
+
+
+/* Heading */
+h1 {
+  font-size: 3em
+}
+
+h2 {
+  font-size: 2.4em
+}
+
+h3 {
+  font-size: 1.92em
+}
+
+h4 {
+  font-size: 1.536em
+}
+
+h5 {
+  font-size: 1.2288em
+}
+
+h6 {
+  font-size: 0.98304em
+}
+
+
+/* Others */
+section > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.grid_container {
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);}
+
+.grid_container > .grid_item {
+  position: relative;
+  border: thin dashed red;
+  background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+.grid_container > .grid_item > img {
+  display: block;
+}
+
+.grid_container > .grid_item > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+
+/* Dividing the Container into 4 Columns */
+#section-1 > .grid_container {
+  grid-template-rows:
+    []
+    1fr
+    [];
+  grid-template-columns: [] 1fr [] 1fr [] 1fr [] 1fr [];
+}
+
+
+/* Giving the Center Column Whatever Available */
+#section-2 > .grid_container {
+  grid-template-rows:
+    []
+    1fr
+    [];
+  grid-template-columns: [] 15em [] 1fr [] 10% [];
+}
+
+
+/* Flexible Column Sizing */
+#section-3 > .grid_container {
+  grid-template-rows:
+    [row-1]
+    1fr
+    [row-2];
+  grid-template-columns: [col-1] 15rem [col-2] 4.5fr [col-3] 3fr [col-4] 10% [col-5];
+}
+
+
+/* Mined/maxed column sizing */
+#section-4 > .grid_container {
+  grid-template-rows:
+    [row-1]
+    1fr
+    [row-2];
+  grid-template-columns: [col-1] 15rem [col-2] minmax(0, 500px) [col-3] 10% [col-4];
+}
+
+
+/* Sizing grid tracks by content */
+#section-5 > .grid_container,
+#section-6 > .grid_container {
+  width: auto;
+  height: auto;
+  grid-template-rows:
+    []
+    max-content
+    []
+    max-content
+    []
+    max-content
+    [];
+  grid-template-columns:
+    [] max-content [] max-content [] max-content [] min-content [];
+}
+
+
+/* Sizing grid tracks with and without minmax() */
+section#seventh > #gc1 {
+  display: inline-grid;
+  width: 300px;
+  height: auto;
+  grid-template-rows:
+    []
+    max-content
+    []
+    max-content
+    []
+    max-content
+    [];
+  grid-template-columns:
+    [] max-content [] max-content [] max-content [] max-content [];
+}
+
+section#seventh > #gc2 {
+  margin-left: 300px;
+  display: inline-grid;
+  width: 300px;
+  height: auto;
+  grid-template-rows:
+    []
+    max-content
+    []
+    max-content
+    []
+    max-content
+    [];
+  grid-template-columns:
+    [] minmax(0, max-content) [] minmax(0, max-content) [] minmax(0, max-content) [] minmax(0, max-content) [];
+}

@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  /*border: 0.2em dashed red;*/
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3em;
+  background-image: linear-gradient(90deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body > section {
+  width: 50%;
+  margin-bottom: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: #F3E7E9;
+}
+
+html > body h1 {
+  font-size: 3em;
+}
+
+html > body h2 {
+  font-size: 2.4em;
+}
+
+html > body h3 {
+  font-size: 1.92em;
+}
+
+html > body h4 {
+  font-size: 1.536em;
+}
+
+html > body h5 {
+  font-size: 1.2288em;
+}
+
+html > body h6 {
+  font-size: 0.98304em;
+}
+
+html > body > a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body > a:link {
+  color: blue;
+}
+
+html > body > a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body > a:focus {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body > a:hover {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body > a:active {
+  color: lightgreen;
+}
+
+/* 2020-07-20 Monday 12:43 */
+
+
+header,
+footer {
+  text-align: center;
+  background: #DDAA00;
+  color: white;
+}
+
+body > header {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+main {
+  background-color: white;
+}
+
+footer {
+  padding: 5px;
+}
+
+body,
+main {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  background-color: white;
+  margin: 5px;
+}
+
+nav {
+  height: 2em;
+  display: flex;
+  padding: 5px 2px;
+  background-color: rgba(221, 170, 0, 0.4);
+  border-top: 1px solid #333333;
+}
+
+nav a {
+  flex: 1 0;
+  margin: 0 5px;
+  background-color: white;
+  color: #DDAA00;
+  padding: 5px 0;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #333333;
+}
+
+body > main {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid;
+  border-width: 1px 0 0 1px;
+}
+
+div {
+  border: 1px solid;
+  padding: 10px;
+  box-sizing: border-box;
+  flex: 1 0;
+  max-width: 300px;
+  min-width: 200px;
+  border-width: 0 1px 1px 0;
+}
+
+.foo {
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a:hover {
+  font-size: larger;
+}

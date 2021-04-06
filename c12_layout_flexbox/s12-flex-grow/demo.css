@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+  font-size: 20px;
+  text-align: center;
+  vertical-align: center;
+}
+
+div {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+article {
+  margin: 1em auto;
+  width: 750px;
+  box-sizing: content-box;
+  border: thin dashed red;
+}
+
+article > div {
+  display: flex;
+  border: 1px dashed limegreen;
+  padding: 2px;
+  min-height: 100px;
+  box-sizing: content-box;
+  background-color: #CCC6C6;
+}
+
+article > div > div {
+  border: thin dashed black;
+  padding: 40px 0;
+  width: 100px;
+  font-size: 1rem;
+  box-sizing: content-box;
+  background-color: #8ABAF1;
+}
+
+p {
+  margin-top: 0;
+}

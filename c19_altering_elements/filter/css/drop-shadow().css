@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+figure {
+  padding: 0.5em;
+  margin: 3em;
+  border: thin dashed black;
+  text-align: center;
+}
+
+img {
+  width: 10em;
+  height: auto;
+}
+
+figure:nth-child(1) > img {
+  filter: drop-shadow(0 0 0);
+}
+
+figure:nth-child(2) > img {
+  filter: drop-shadow(2px 2px 2px);
+}
+
+figure:nth-child(3) > img {
+  filter: drop-shadow(-0.5em -0.5em 0.5em);
+}
+
+figure:nth-child(4) > img {
+  filter: drop-shadow(0.5em 0.33em 0.5em red);
+}
+
+figure:nth-child(5) > img {
+  filter: drop-shadow(0 0 0.5em yellow) drop-shadow(0.5em 0.75em 30px gray);
+}

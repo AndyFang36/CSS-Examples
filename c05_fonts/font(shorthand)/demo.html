@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>font</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      h1#First {
+        /*no problem here */
+        font: normal normal italic 30px sans-serif;
+      }
+
+      h1#Two {
+        /* also fine; omitted values set to 'normal' */
+        font: 1.5em sans-serif;
+      }
+
+      h1#Three {
+        /* INVALID: no 'font-size' provided */
+        font: sans-serif;
+      }
+
+      h1#Four {
+        /* INVALID: no 'font-family' provided */
+        font: lighter 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="One">A Level 1 Heading Element</h1>
+    <h1 id="Two">A Level 1 Heading Element</h1>
+    <h1 id="Three">A Level 1 Heading Element</h1>
+    <h1 id="Four">A Level 1 Heading Element</h1>
+  </body>
+</html>
+
+
+<!-- NOTE -->
+<!------------------------------------------------------------------------------------------------------------------------------------------
+Not only must 'font-size' & 'font-family' appear in that order as the last box2 values in the
+declaration, but both must always be present in a font declaration.
+------------------------------------------------------------------------------------------------------------------------------------------->

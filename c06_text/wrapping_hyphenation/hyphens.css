@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.cl01 {
+  hyphens: auto;
+}
+
+.cl02 {
+  hyphens: manual;
+}
+
+.cl03 {
+  hyphens: none;
+}
+
+div {
+  float: left;
+  width: 12em;
+  margin-right: 3em;
+  display: grid;
+  grid-template-rows: repeat(4, 6em 4.5em);
+}
+
+div p {
+  height: auto;
+  margin-bottom: auto;
+  border: 2px dashed orange;
+}
+
+.d01 p {
+  width: 12em;
+}
+
+.d02 p {
+  width: 10em;
+}
+
+.d03 p {
+  width: 8em;
+}
+
+
+div.labels {
+  width: 10em;
+  margin-right: 1em;
+  padding-right: 1em;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+div.labels p {
+  border: 0;
+  text-align: right;
+}
+
+div.labels p > * {
+  display: block;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 15em);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin-left: 11em;
+  padding-left: 1em;
+}
+
+.labels p {
+  font: 90% Open Sans, sans-serif;
+  opacity: 0.666;
+}

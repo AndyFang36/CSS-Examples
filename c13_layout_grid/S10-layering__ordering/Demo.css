@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3em;
+  background-image: linear-gradient(90deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+/* Grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  width: auto;
+  height: auto;
+  margin-bottom: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: darkgrey;
+}
+
+/* Heading */
+html > body h1 {
+  font-size: 3em
+}
+
+html > body h2 {
+  font-size: 2.4em
+}
+
+html > body h3 {
+  font-size: 1.92em
+}
+
+html > body h4 {
+  font-size: 1.536em
+}
+
+html > body h5 {
+  font-size: 1.2288em
+}
+
+html > body h6 {
+  font-size: 0.98304em
+}
+
+/* Link */
+html > body a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body a:link {
+  color: blue;
+}
+
+html > body a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body a:focus {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:hover {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:active {
+  color: lightgreen;
+}
+
+/* Others */
+html > body > section > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+html > body .container {
+  display: grid;
+  width: auto;
+  height: 20em;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  background-color: ghostwhite;
+}
+
+html > body .item {
+  position: relative;
+  border: thin dashed black;
+  /*background-image: linear-gradient(to top, #0FD850 0%, #F9F047 100%);*/
+}
+
+html > body span[class*="box"] {
+  opacity: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.67);
+}
+
+html > body .item > img {
+  display: block;
+}
+
+html > body .item > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+
+/* Grid items overlapping in source order */
+#section-1 > .container > .box-1 {
+  grid-row: 1 / span 4;
+  grid-column: 1 / span 4;
+  background-color: red;
+}
+
+#section-1 > .container > .box-2 {
+  grid-row: 4 / span 4;
+  grid-column: 4 / span 4;
+  background-color: green;
+}
+
+#section-1 > .container > .box-3 {
+  grid-row: 7 / span 4;
+  grid-column: 7 / span 4;
+  background-color: blue;
+}
+
+#section-1 > .container > .box-4 {
+  grid-row: 4 / span 7;
+  grid-column: 3 / span 2;
+  background-color: orange;
+}
+
+#section-1 > .container > .box-5 {
+  grid-row: 2 / span 3;
+  grid-column: 4 / span 5;
+  background-color: hotpink;
+}

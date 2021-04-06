@@ -1,0 +1,65 @@
+<title>@keyframes</title>
+
+<meta charset="UTF-8"/>
+
+<style type="text/css">
+  @keyframes fadeout {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes color-pop {
+    0% {
+      background-color: red;
+    }
+    14.285714285714285714285714285714% {
+      background-color: orange;
+    }
+    28.571428571428571428571428571429% {
+      background: yellow;
+    }
+    42.857142857142857142857142857143% {
+      background-color: green;
+    }
+    57.142857142857142857142857142857% {
+      background-color: blue;
+    }
+    71.428571428571428571428571428571% {
+      background-color: indigo;
+    }
+    85.714285714285714285714285714285% {
+      background-color: violet;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+
+  * {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    padding: 1em;
+    font-size: 16px;
+    background-color: darkgray;
+  }
+
+  #box {
+    font-size: 10em;
+    font-family: "Fira Code Retina", monospace;
+    text-align: center;
+    overflow-wrap: break-word;
+    animation-name: color-pop;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+</style>
+
+<body id="box">Hello!</body>

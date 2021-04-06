@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>font-style</title>
+    <meta charset="UTF-8">
+    <style>
+      html {
+        padding: 0.1rem;
+        background-color: dimgray;
+      }
+
+      html > body {
+        padding: 1em;
+        border-radius: 0.75em;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      html > body > p {
+        font-family: serif;
+        font-size: 50px;
+      }
+
+      #normal {
+        font-style: normal;
+      }
+
+      #italic {
+        font-style: italic;
+      }
+
+      #oblique {
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="normal" title="normal">This is a paragraph!</p>
+    <p id="italic" title="italic">This is a paragraph!</p>
+    <p id="oblique" title="oblique">This is a paragraph!</p>
+  </body>
+</html>

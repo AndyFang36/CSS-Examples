@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+html {
+  padding: 0.1rem;
+  text-align: center;
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+}
+
+body {
+  padding: 1em;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  text-align: center;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+caption {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+tbody tr:nth-child(2n+1) {
+  background-color: #d9e3e0;
+}
+
+th, td {
+  padding: 10px;
+  border-style: solid;
+}
+
+.Serif {
+  font-family: serif;
+}
+
+.Sans-serif {
+  font-family: sans-serif;
+}
+
+.Monospace {
+  font-family: monospace;
+}
+
+.Cursive {
+  font-family: cursive;
+}
+
+.Fantasy {
+  font-family: fantasy;
+}
+
+.weight_100 {
+  font-weight: 100;
+}
+
+.weight_200 {
+  font-weight: 200;
+}
+
+.weight_300 {
+  font-weight: 300;
+}
+
+.weight_400 {
+  font-weight: 400;
+}
+
+.weight_500 {
+  font-weight: 500;
+}
+
+.weight_600 {
+  font-weight: 600;
+}
+
+.weight_700 {
+  font-weight: 700;
+}
+
+.weight_800 {
+  font-weight: 800;
+}
+
+.weight_900 {
+  font-weight: 900;
+}
+
+.Lighter {
+  font-weight: lighter;
+}
+
+.Normal {
+  font-weight: normal;
+}
+
+.Bold {
+  font-weight: bold;
+}
+
+.Bolder {
+  font-weight: bolder;
+}

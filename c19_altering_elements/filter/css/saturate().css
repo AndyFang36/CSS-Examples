@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+figure {
+  padding: 0.5em;
+  margin: 3em;
+  border: thin dashed black;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+figure > img {
+  width: 10em;
+  height: auto;
+}
+
+figure > figcaption {
+  margin-top: 0.5em;
+}
+
+figure:nth-child(1) > img {
+  filter: saturate(0);
+}
+
+figure:nth-child(2) > img {
+  filter: saturate(25%);
+}
+
+figure:nth-child(3) > img {
+  filter: saturate(50%);
+}
+
+figure:nth-child(4) > img {
+  filter: saturate(75%);
+}
+
+figure:nth-child(5) > img {
+  filter: saturate(100%);
+}
+
+figure:nth-child(6) > img {
+  filter: saturate(125%);
+}
+
+figure:nth-child(7) > img {
+  filter: saturate(150%);
+}
+
+figure:nth-child(8) > img {
+  filter: saturate(175%);
+}
+
+figure:nth-child(9) > img {
+  filter: saturate(200%);
+}
+
+figure:nth-child(10) > img {
+  filter: saturate(300%);
+}
+
+figure:nth-child(11) > img {
+  filter: saturate(400%);
+}
+
+figure:nth-child(12) > img {
+  filter: saturate(500%);
+}
+
+figure:nth-child(13) > img {
+  filter: saturate(600%);
+}
+
+figure:nth-child(14) > img {
+  filter: saturate(700%);
+}
+
+figure:nth-child(15) > img {
+  filter: saturate(800%);
+}

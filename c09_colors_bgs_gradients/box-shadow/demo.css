@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+html {
+  padding: 0;
+}
+
+body {
+  background: url("smile.png") repeat;
+  background-size: 3em auto;
+}
+
+.arena ol {
+  display: flex;
+}
+
+.arena ol li {
+  list-style: none;
+  width: 15ch;
+  margin-right: 30px;
+  padding: 1ch;
+  font: bold 1em sans-serif;
+  background: silver;
+  border: medium solid;
+}
+
+#box {
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}

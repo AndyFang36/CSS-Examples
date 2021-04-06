@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+div {
+  border: thin dashed red;
+  float: left;
+  position: relative;
+  margin: 50px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  transition: 5s;
+  background-color: transparent;
+}
+
+div:nth-child(5) {
+  clear: left;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  vertical-align: bottom;
+  opacity: 0.9;
+}
+
+span {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  white-space: pre;
+  font: 17px "Anadale Mono", monospace;
+}
+
+#ex01 {
+  transform: rotateX(45deg);
+}
+
+#ex02 {
+  transform: rotateX(-33deg);
+}
+
+#ex03 {
+  transform: rotateY(45deg);
+}
+
+#ex04 {
+  transform: rotateY(-33deg);
+}
+
+#ex05 {
+  transform: rotateZ(-33deg);
+}
+
+#ex06 {
+  transform: rotateZ(45deg);
+}
+
+#ex07 {
+  transform: rotate(45deg);
+}
+
+#ex05 + span, #ex06 + span, #ex07 + span {
+  top: 125%;
+}
+
+/*****************************************************************************************
+*****************************************************************************************/

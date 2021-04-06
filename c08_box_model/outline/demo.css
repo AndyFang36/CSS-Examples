@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+html {
+  margin: 0;
+  background-image: linear-gradient(to right, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);
+}
+
+body {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: rgba(243, 231, 233, 0.7);
+}
+
+section{
+  margin: 1em;
+  padding: 0.8em;
+  border-radius: 1em;
+  background-color: rgba(233, 222, 250, 0.9);
+}
+
+
+/* outline */
+li {
+  /* box */
+  margin: 0.75em 1em;
+  padding: 0.5em 1em;
+  width: 47%;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: #000000;
+  border-width: thick;
+  /* font & text */
+  font-family: "Consolas", monospace;
+  font-size: xx-large;
+  text-align: center;
+}
+
+li:nth-child(1) {
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gold;
+}
+
+li:nth-child(2) {
+  outline-style: dotted;
+  outline-width: medium;
+  outline-color: #00daff;
+}
+
+li:nth-child(3) {
+  outline-style: double;
+  outline-width: thick;
+  outline-color: rgb(225, 61, 175);
+}
+
+li:nth-child(4) {
+  outline-style: inset;
+  outline-width: 0.5em;
+  outline-color: rgba(0, 0, 255, 0.3);
+}
+
+li:nth-child(5) {
+  outline-style: groove;
+  outline-width: 5px;
+  outline-color: hsl(120, 100%, 50%);
+}
+
+li:nth-child(6) {
+  outline-style: dashed;
+  outline-width: 0.1in;
+  outline-color: hsla(232, 100%, 50%, 0.9);
+}
+
+
+/* outlines don’t affect layout at all */
+section#Second p span:first-child{
+  outline: solid 0.5em #0fd850;
+}
+
+section#Second p span:last-child{
+  outline: double 5px #ff0000;
+}
+
+
+/* they are not always rectangular, nor are they always contiguous */
+section#Third p:first-child span{
+  outline-style: dotted;
+  outline-color: #0fd850;
+}
+
+section#Third p:last-child span{
+  outline-style: dotted;
+  outline-color: #d80f0f;
+}

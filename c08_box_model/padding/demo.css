@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+*{
+  box-sizing: content-box;
+}
+
+p{
+  background-color: #6BE899;
+  background-clip: content-box;
+}
+
+html {
+  margin: 0;
+  background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%);
+}
+
+html > body {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.2rem;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: rgba(243, 231, 233, 0.5);
+}
+
+html > body section {
+  width: 100%;
+  margin: auto;
+  padding: 0.2em;
+  border-radius: 1em;
+  background-color: rgba(255, 250, 250, 0.5);
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.3vh;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+html > body h1, h2, h3, h4, h5, h6 {
+  border-style: dashed;
+  border-width: thick;
+  border-color: black;
+  color: black;
+  background-color: gold;
+}
+
+html > body strong {
+  background-color: #83F3C7;
+}
+
+/* Adding padding to elements */
+section#First h2 {
+  padding: 1em;
+}
+
+
+/* The effect of padding on bordered block-level elements */
+section#Second p {
+  border: 2px dashed #000000;
+}
+
+section#Second p:first-child {
+  padding: 1em;
+}
+
+
+/* Mixed-value padding */
+section#Third h2 {
+  padding: 14px 5em 0.1in 3ex;
+}
+
+
+/* Using padding instead of margins */
+section#Forth p {
+  margin: 0;
+  padding: 1em;
+  border-bottom: 1px solid gray;
+  border-left: 5px double black;
+  border-right: 5px double black;
+}
+
+section#Forth p:first-child {
+  border-top: 5px solid #000000;
+}
+
+section#Forth p:last-child {
+  border-bottom: 5px solid #000000;
+}
+
+
+/* More than box1 single-side padding */
+section#Fifth h2 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 2em;
+  padding-left: 3em;
+}
+
+
+/* Padding, percentages, and the widths of parent elements */
+div {
+  margin: 1em auto;
+  border-style: dashed;
+  border-width: thick;
+  border-color: black;
+  border-radius: 1em;
+  background-color: #CAD2FF;
+}
+
+div:nth-child(1) {
+  width: 600px;
+  height: auto;
+}
+
+div:nth-child(2) {
+  width: 300px;
+  height: auto;
+}
+
+section#Sixth div p {
+  padding: 10%;
+  background-color: silver;
+}
+
+
+/* Mixed padding */
+section#Seventh div {
+  width: 300px;
+  height: 200px;
+  border-style: solid;
+  border-color: red;
+  border-width: thick;
+}
+
+section#Seventh div h2 {
+  padding: 2em 20%;
+}
+
+
+/* Padding on an inline non-replaced element */
+section#Eighth > p {
+  margin: 0;
+  padding: 1em;
+  border-bottom: 1px solid #C5C5C5;
+}
+
+section#Eighth > p:last-child {border-bottom-style: none}
+
+section#Eighth > p:nth-child(1) > strong {padding-top: 1em;}
+
+section#Eighth > p:nth-child(2) > strong {padding-left: 1em;}
+
+section#Eighth > p:nth-child(3) > strong {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+section#Eighth > p:nth-child(4) > strong {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+/* Padding replaced elements */
+section#Ninth > img {
+  width: 300px;
+  height: auto;
+  padding: 1em;
+  background-color: #0ADE96;
+  border-style: dashed;
+  border-radius: 1em;
+  border-color: #000000;
+}
+
+section#Ninth > p > img {
+  width: 80px;
+  height: auto;
+  padding: 1em;
+  background-color: #0ADE96;
+  border-style: dashed;
+  border-radius: 1em;
+  border-color: #000000;
+}

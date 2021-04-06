@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flexible Grid Track</title>
+    <meta charset="UTF-8"/>
+    <meta name="generator" content="WebStorm 2020.2"/>
+    <link rel="stylesheet" type="text/css" href="./flexible.css"/>
+  </head>
+  <body>
+    <section id="section-1">
+      <h2>Dividing the container into four columns</h2>
+      <div class="grid_container">
+        <span class="grid_item"><label>1fr</label></span>
+        <span class="grid_item"><label>1fr</label></span>
+        <span class="grid_item"><label>1fr</label></span>
+        <span class="grid_item"><label>1fr</label></span>
+      </div>
+    </section>
+    <hr/>
+    <section id="section-2">
+      <h2>Giving the center column whatever’s available</h2>
+      <div class="grid_container">
+        <span class="grid_item"><label>15em</label></span>
+        <span class="grid_item"><label>1fr</label></span>
+        <span class="grid_item"><label>10%</label></span>
+      </div>
+    </section>
+    <hr/>
+    <section id="section-3">
+      <h2>Flexible column sizing</h2>
+      <div class="grid_container">
+        <span class="grid_item"><label>15em</label></span>
+        <span class="grid_item"><label>4.5fr</label></span>
+        <span class="grid_item"><label>3fr</label></span>
+        <span class="grid_item"><label>10%</label></span>
+      </div>
+    </section>
+    <hr/>
+    <section id="section-4">
+      <h2>Mined/maxed column sizing</h2>
+      <div class="grid_container">
+        <span class="grid_item"><label>15em</label></span>
+        <span class="grid_item"><label>minmax(0, 500px)</label></span>
+        <span class="grid_item"><label>10%</label></span>
+      </div>
+    </section>
+    <hr/>
+    <section id="section-5">
+      <h2>Sizing grid tracks by content</h2>
+      <div class="grid_container">
+        <!-- row-1 -->
+        <span class="grid_item">
+          <img src="images/background.jpg" height="50" width="auto" alt="#"/>
+        </span>
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <!-- row-2 -->
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/sheep.jpg" height="135" width="auto" alt="#"/>
+        </span>
+        <span class="grid_item"></span>
+        <!-- row-3 -->
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/sunflower.JPEG" height="auto" width="150" alt="#"/>
+        </span>
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/demo.jpg" height="100" width="auto" alt="#"/>
+        </span>
+      </div>
+    </section>
+    <hr/>
+    <section id="section-6">
+      <h2>Sizing grid tracks around mixed content</h2>
+      <div class="grid_container">
+        <!-- row-1 -->
+        <span class="grid_item">
+          <img src="images/background.jpg" height="50" width="auto" alt="#"/>
+          Fancy icon
+        </span>
+        <span class="grid_item">A wide shot</span>
+        <span class="grid_item">Very circular, with a twist</span>
+        <span class="grid_item">A portrait in yellow</span>
+        <!-- row-2 -->
+        <span class="grid_item">Simple icon</span>
+        <span class="grid_item">Medicore icon</span>
+        <span class="grid_item">
+          <img src="images/sheep.jpg" height="135" width="auto" alt="#"/>
+          The Big Kahuna
+        </span>
+        <span class="grid_item">This caption intentionally left blank</span>
+        <!-- row-3 -->
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/sunflower.JPEG" height="auto" width="150" alt="#"/>
+        </span>
+        <span class="grid_item">The only caption in its row</span>
+        <span class="grid_item">
+          <img src="images/demo.jpg" height="100" width="auto" alt="#"/>
+        </span>
+      </div>
+    </section>
+    <hr/>
+    <section id="seventh">
+      <h2>Sizing grid tracks with and without minmax()</h2>
+      <div id="gc1" class="grid_container">
+        <!-- row-1 -->
+        <span class="grid_item">
+          <img src="images/background.jpg" height="50" width="auto" alt="#"/>
+        </span>
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <!-- row-2 -->
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/sheep.jpg" height="135" width="auto" alt="#"/>
+        </span>
+        <span class="grid_item"></span>
+        <!-- row-3 -->
+        <span class="grid_item"></span>
+        <span class="grid_item">
+           <img src="images/sunflower.JPEG" height="auto" width="150" alt="#"/>
+          </span>
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/demo.jpg" height="100" width="auto" alt="#"/>
+        </span>
+      </div>
+      <div id="gc2" class="grid_container">
+        <!-- row-1 -->
+        <span class="grid_item">
+          <img src="images/background.jpg" height="50" width="auto" alt="#"/>
+        </span>
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <!-- row-2 -->
+        <span class="grid_item"></span>
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/sheep.jpg" height="135" width="auto" alt="#"/>
+        </span>
+        <span class="grid_item"></span>
+        <!-- row-3 -->
+        <span class="grid_item"></span>
+        <span class="grid_item">
+           <img src="images/sunflower.JPEG" height="auto" width="150" alt="#"/>
+          </span>
+        <span class="grid_item"></span>
+        <span class="grid_item">
+          <img src="images/demo.jpg" height="100" width="auto" alt="#"/>
+        </span>
+      </div>
+    </section>
+  </body>
+</html>

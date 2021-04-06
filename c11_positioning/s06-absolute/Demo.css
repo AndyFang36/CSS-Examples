@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  border: 1px dashed red;
+}
+
+*::selection {
+  color: yellow;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 1vh;
+  background-image: linear-gradient(90deg, #C789E2, rgba(117, 121, 255, 0.59));
+}
+
+html > body {
+  position: relative;
+  margin: 0;
+  padding: 1vh;
+  border-radius: 1vh;
+  background-color: rgba(243, 231, 233, 0.5);
+}
+
+html > body > hr {
+  width: 100%;
+  height: 0.3vh;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+
+/* Using relative positioning to define containing blocks */
+section#First {
+  position: relative;
+  width: 800px;
+  padding-bottom: 2em;
+  border: 1px dashed red;
+}
+
+section#First > p {
+  margin: 2em;
+  margin-right: 15em;
+  border: 1px dashed red;
+}
+
+section#First > p.Container {
+  position: relative; /* establish a containing block*/
+}
+
+section#First > p > b,
+section#First > p > em > b {
+  opacity: 50%;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: 8em;
+  height: 5em;
+  color: blue;
+  background-color: rgba(122, 241, 177, 0.44);
+}
+
+
+/* Positioning an element whose containing block is the root element */
+section#Second {
+  width: 600px;
+  position: relative;
+}
+
+section#Second > p {
+  text-indent: 2em;
+  margin: 0;
+}
+
+section#Second > p.Container {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  left: 25%;
+  bottom: auto;
+  width: 50%;
+  height: auto;
+  color: red;
+  background: rgba(118, 231, 158, 0.52);
+}
+
+
+/* Absolutely positioned elements establish containing blocks */
+section#Third {
+  width: 40em;
+  height: auto;
+}
+
+section#Third > div.Container {
+  position: relative;
+  width: 100%;
+  height: 10em;
+  background-color: rgba(62, 154, 218, 0.33);
+  color: rgba(0, 0, 0, 0.65);
+  font: bold italic x-large sans-serif;
+}
+
+section#Third > div:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 15em;
+  height: 100%;
+  background-color: rgba(240, 172, 86, 0.67);
+}
+
+section#Third > div:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10em;
+  height: 50%;
+  background-color: rgba(229, 79, 229, 0.67);
+}
+
+
+/* Determining the height of an element based on the offset properties */
+section#Forth {
+  width: 400px;
+  height: auto;
+}
+
+section#Forth > div {
+  position: relative;
+  width: 100%;
+  height: 10em;
+  background: rgba(0, 128, 216, 0.33);
+  color: rgba(0, 0, 0, 0.5);
+  font: bold italic small sans-serif;
+}
+
+section#Forth > div > h1 {
+  position: absolute;
+  top: 1em;
+  bottom: 10px;
+  left: 1em;
+  right: 25%;
+  background: rgba(216, 128, 0, 0.67);
+}

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 1vh;
+  background-image: linear-gradient(90deg, #B224EF, #7579FF);
+}
+
+html > body {
+  margin: 0;
+  padding: 1vh;
+  border-radius: 1vh;
+  background-color: rgba(243, 231, 233, 0.5);
+}
+
+html > body > section {
+  width: 50%;
+  margin-bottom: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: #E9E5E6;
+}
+
+
+/*  */
+section#First > h3 {
+  clear: both;
+  color: ghostwhite;
+  background-color: #555555;
+}
+
+section#First > p > span.LeftArrow {
+  width: 2em;
+  height: calc(2em * 5);
+  margin: 5px;
+  background: url("image/arrow.png") round, linear-gradient(to bottom, red, purple);
+  float: left;
+}
+
+section#First > p > span.RightArrow {
+  width: 2em;
+  height: calc(2em * 5);
+  margin: 5px;
+  background: url("image/arrow.png") round, linear-gradient(to bottom, red, purple);
+  float: right;
+}
+
+
+/*  */
+#section-2 > img {
+  float: left;
+  margin: 0;
+}
+
+#section-2 > h3 {
+  border: 1px solid #FF0000;
+  clear: both;
+  margin-top: 0;
+}

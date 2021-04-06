@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>font-feature-settings</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      @font-face {
+        font-family: 'SwitzeraADF';
+        font-style: normal;
+        src: local('SwitzeraADF-Regular'), url('./Font/SwitzeraADF/SwitzeraADF-Regular.otf') format('opentype');
+      }
+
+      p {
+        font-family: 'SwitzeraADF', sans-serif;
+      }
+
+      p#calt {
+        font-feature-settings: 'calt' on;
+      }
+
+      p#ccmp {
+        font-feature-settings: 'ccmp' on;
+      }
+
+      p#clig {
+        font-feature-settings: 'clig' on;
+      }
+
+      p#liga {
+        font-feature-settings: 'liga' on;
+      }
+
+      p#locl {
+        font-feature-settings: 'locl' on;
+      }
+
+      p#mark {
+        font-feature-settings: 'mark' on;
+      }
+
+      p#mkmk {
+        font-feature-settings: 'mkmk' on;
+      }
+
+      p#rlig {
+        font-feature-settings: 'rlig' on;
+      }
+
+      p#zero{
+        font-feature-settings: 'zero' on;
+      }
+    </style>
+  </head>
+  <body>
+    <p>I like music!</p>
+    <p id="calt">I like music!</p>
+    <p id="ccmp">I like music!</p>
+    <p id="clig">I like music!</p>
+    <p id="liga">I like music!</p>
+    <p id="locl">I like music!</p>
+    <p id="mark">I like music!</p>
+    <p id="mkmk">I like music!</p>
+    <p id="rlig">I like music!</p>
+    <p id="zero">01234567789</p>
+  </body>
+</html>

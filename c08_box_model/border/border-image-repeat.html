@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>border-image-repeat</title>
+    <base href="#" target="_self"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Andy"/>
+    <meta name="reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="keyword" content="HTML,CSS,JS,WEB"/>
+    <meta name="description" content="*"/>
+    <meta name="generator" content="WebStorm 2020.2"/>
+    <meta name="copyright" content="Copyright © 2020 *."/>
+    <meta http-equiv="refresh" content="*;url=#"/>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <style type="text/css">
+      body {
+        width: 976px;
+      }
+
+      ol {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        margin: 0.75em 0;
+        padding: 1.5em 1em;
+        width: 33%;
+        list-style: none;
+        font: 125% monospace;
+        text-align: center;
+        border: 3em solid;
+        border-image-source: url(images/circles.png);
+        border-image-width: 1;
+        border-image-slice: 33.333333%;
+        border-image-outset: 0.5em;
+      }
+
+      #li01 {
+        border-image-repeat: stretch;
+      }
+
+      #li02 {
+        border-image-repeat: repeat;
+      }
+
+      #li03 {
+        border-image-repeat: round;
+      }
+
+      #li04 {
+        border-image-repeat: space;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li id="li01">border-image-repeat: stretch;</li>
+      <li id="li02">border-image-repeat: repeat;</li>
+      <li id="li03">border-image-repeat: round;</li>
+      <li id="li04">border-image-repeat: space;</li>
+    </ol>
+    <script type="text/javascript"></script>
+  </body>
+</html>

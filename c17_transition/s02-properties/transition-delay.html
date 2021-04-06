@@ -1,0 +1,64 @@
+<meta charset="UTF-8"/>
+
+<style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .track {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+  }
+
+  .track:nth-of-type(1) {
+    background-color: mediumseagreen;
+  }
+
+  .track:nth-of-type(2) {
+    background-color: orange;
+  }
+
+  .track:nth-of-type(3) {
+    background-color: lightskyblue;
+  }
+
+  .car {
+    transform: none;
+    font-size: xx-large;
+  }
+
+  /*
+    #car-1:hover {
+      transition: transform 5s ease-in-out 0.5s;
+      transform: translateX(-100vw);
+    }
+    #car-2:hover {
+      transition: transform 5s ease 0.5s;
+      transform: translateX(-100vw);
+    }
+    #car-3:hover {
+      transition: transform 5s linear 0.5s;
+      transform: translateX(-90vw);
+    }*/
+</style>
+
+<div class="track"><span class="car" id="car-1">🚙</span></div>
+<div class="track"><span class="car" id="car-2">🚙</span></div>
+<div class="track"><span class="car" id="car-3">🚙</span></div>
+<button id="startButton">Start</button>
+
+<script type="text/javascript">
+    const start = document.getElementById('startButton');
+    const cars = document.querySelector('.car');
+    const car1 = document.querySelector('#car-1');
+    const car2 = document.querySelector('#car-2');
+    const car3 = document.querySelector('#car-3');
+    start.onclick = function() {
+        cars.style.transform = 'translateX(-100vw)';
+        car1.style.transition = 'transform 5s ease-in-out 0.5s';
+        car2.style.transition = 'transform 5s ease 0.5s';
+        car3.style.transition = 'transform 5s linear 0.5s';
+    }
+</script>

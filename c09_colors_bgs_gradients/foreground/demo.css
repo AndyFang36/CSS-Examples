@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+html {
+  background-image: linear-gradient(-20deg, #E9DEFA 0%, #FBFCDB 100%);
+}
+
+body {
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  width: 60%;
+  height: auto;
+  border-radius: 1em;
+  text-align: unset;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+hr {
+  width: auto;
+  height: 0.1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+/* Foreground Colors */
+p#foreground {
+  color: gray;
+}
+
+p .warn,
+p b {
+  color: orange;
+}
+
+a {
+  color: #0022FF;
+}
+
+a:hover {
+  color: red;
+}
+
+/* Affecting Borders */
+p.aside {
+  color: #FF006A;
+  border-style: dashed;
+}
+
+img {
+  margin: 1em;
+  width: 10em;
+  height: 10em;
+  border-style: dashed;
+  border-width: thick;
+}
+
+img#First {
+  color: #0ADE96;
+}
+
+img#Second {
+  border-color: #0ADE96;
+}
+
+/* Affecting Form Elements */
+label {
+  display: block;
+  margin: 1em;
+}
+
+label.checkbox {
+  display: inline;
+  margin: auto;
+}
+
+select {
+  color: rgb(33%, 33%, 33%);
+}
+
+option {
+  color: orange;
+  background-color: #888888;
+}
+
+option[disabled] {
+  display: none;
+}
+
+input {
+  color: red;
+}
+
+
+/* Inheriting Color */
+p {
+  color: black;
+}
+
+p em {
+  color: #FF6A00;
+}

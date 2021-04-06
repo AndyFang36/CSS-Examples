@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+  padding: 100px;
+}
+
+nav {
+  display: flex;
+  border-bottom: thin solid #CCCCCC;
+}
+
+a {
+  margin: 0 5px;
+  padding: 5px 15px;
+  border-radius: 3px 3px 0 0;
+  text-decoration: none;
+  color: white;
+  background-color: #DDAA00;
+}
+
+a:hover,
+a.active {
+  text-decoration: none;
+  color: black;
+  background-color: #FFCC22;
+}
+
+a.active{
+  order: -1;
+}

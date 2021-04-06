@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+div {
+  border: 1px solid red;
+  float: left;
+  position: relative;
+  margin: 6em;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  transition: 5s;
+}
+
+div:hover {
+  transition: 5s;
+  transform: rotateY(360deg);
+}
+
+div:nth-child(5) {
+  clear: left;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  vertical-align: bottom;
+  opacity: 0.9;
+}
+
+span {
+  position: absolute;
+  top: 115%;
+  left: -25%;
+  width: 150%;
+  text-align: center;
+  white-space: pre;
+  font: 17px Anadale Mono, monospace;
+}
+
+#ex01 {
+  transform: skewX(45deg);
+}
+
+#ex02 {
+  transform: skewX(-20deg);
+}
+
+#ex03 {
+  transform: skewY(45deg);
+}
+
+#ex04 {
+  transform: skewY(-20deg);
+}
+
+#ex05 {
+  transform: skew(45deg, 20deg);
+}
+
+#ex06 {
+  transform: skew(45deg, -20deg);
+}
+
+#ex07 {
+  transform: skew(-45deg, 20deg);
+}
+
+#ex08 {
+  transform: skew(-45deg, -20deg);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>line-height</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./line-height.css">
+  </head>
+  <body>
+    <p>This paragraph inherits a 'line-height' of 18px from the body, as well as a 'font-size' of 16px.</p>
+    <p class="cl1">
+      This paragraph has a 'line-height' of 27px(18 * 1.5), so it will have slightly more line-height than usual.
+    </p>
+    <p class="cl2">
+      This paragraph has a 'line-height' of 15px (10 * 150%), so it will have slightly more line-height than usual.
+    </p>
+    <p class="cl3">
+      This paragraph has a 'line-height' of 0.33in, so it will have slightly more line-height than usual.
+    </p>
+    <hr/>
+    <div id="One">
+      <p>
+        This paragraph's 'font-size' is 18px, but the inherited 'line-height'
+        value is only 10px. This may cause the lines of text to overlap each
+        other by a small amount.
+      </p>
+    </div>
+    <hr/>
+    <div id="Two">
+      <p>
+        This paragraph's 'font-size' is 18px, and since the 'line-height'
+        set for the parent div is 1.5, the 'line-height' for this paragraph
+        is 27px (18 * 1.5).
+      </p>
+    </div>
+  </body>
+</html>

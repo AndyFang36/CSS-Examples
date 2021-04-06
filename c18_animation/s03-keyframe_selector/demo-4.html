@@ -1,0 +1,36 @@
+<style type="text/css">
+  @keyframes changeBg {
+    0% {
+      background-color: red;
+    }
+    33.33% {
+      background-color: green;
+    }
+    66.66% {
+      background-color: blue;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    animation-name: changeBg;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+</style>
+<script type="text/javascript" async>
+    const aRule = changeBg.findRule('33.33%').cssText;
+    console.log(aRule);
+    changeBg.deleteRule('33.33%');
+    changeBg.appendRule('33.33% { background-color: yellow; }');
+</script>
+
+<body></body>

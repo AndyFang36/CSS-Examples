@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <title>writing mode</title>
+    <meta name="Revised" content="Current Version: Andy, 2020.07.14"/>
+    <meta name="Generator" content="IntelliJ IDEA 2020.1.1 (Ultimate Edition)"/>
+    <meta name="Build" content="2020.07.14"/>
+    <meta name="Robots" content="All"/>
+    <meta name="Keyword" content="CSS,HTML,JS,Web"/>
+    <meta name="Description" content="This is a web page."/>
+    <meta name="Author" content="Andy"/>
+    <meta name="Reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="Copyright" content="Copyright © 2020 xxx company. All rights reserved."/>
+    <meta name="Viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Windows-Target" content="_top"/>
+    <meta http-equiv="Refresh" content="5;url=#"/>
+    <meta http-equiv="Expires" content="Tuesday, 14 July 2020 15:28 GMT"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Set-Cookie" content="Tuesday, 14 July 2020 15:28 GMT"/>
+    <style type="text/css">
+      p {
+        border: 2px dashed;
+        border-color: #0ade96;
+        float: left;
+        width: 8em;
+        height: 6em;
+        margin: 1em;
+      }
+
+      .cl1 {
+        writing-mode: horizontal-tb;
+      }
+
+      .cl2 {
+        writing-mode: vertical-rl;
+      }
+
+      .cl3 {
+        writing-mode: vertical-lr;
+      }
+
+      div.labels {
+        clear: left;
+        display: flex;
+      }
+
+      div.labels p {
+        width: 8em;
+        text-align: center;
+        height: auto;
+        margin-top: 0;
+        border: 0;
+      }
+
+      div.labels p strong {
+        font: bold 90% Open Sans, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="arena">
+      <p class="cl1">This is a paragraph of English text, largely unstyled.</p>
+      <p class="cl2">This is a paragraph of English text, largely unstyled.</p>
+      <p class="cl3">This is a paragraph of English text, largely unstyled.</p>
+    </div>
+    <div class="labels">
+      <p><strong>horizontal-tb</strong></p>
+      <p><strong>vertical-rl</strong></p>
+      <p><strong>vertical-lr</strong></p>
+    </div>
+  </body>
+</html>

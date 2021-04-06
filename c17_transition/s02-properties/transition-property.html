@@ -1,0 +1,26 @@
+<div>Hello</div>
+
+<style type="text/css">
+  div {
+    border: medium solid black;
+    border-radius: 1em;
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    padding: 100px;
+    color: #00FF00;
+    transition-property: all, border, opacity, color;
+    transition-duration: 1s, 2s, 3s, 4s;
+  }
+</style>
+
+<script type="text/javascript">
+    document.querySelector('div').addEventListener(
+        'transitionend',
+        function(p) {
+            console.log(p.propertyName);
+            console.log(p.elapsedTime);
+        }
+    );
+</script>

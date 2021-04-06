@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+html {
+  padding: 5rem;
+}
+
+div {
+  border: thin solid red;
+  float: left;
+  position: relative;
+  margin: 75px 50px;
+  background-color: gray;
+}
+
+div:nth-child(9),
+div:nth-child(10) {
+  background-color: transparent;
+}
+
+div > img {
+  height: 10em;
+  width: 10em;
+  vertical-align: bottom;
+  opacity: 0.7;
+}
+
+div > span {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  white-space: pre;
+  font: 1em "Anadale Mono", monospace;
+}
+
+#ex01 {
+  transform: scaleX(2);
+}
+
+#ex02 {
+  transform: scaleX(0.5);
+}
+
+#ex03 {
+  transform: scaleY(2);
+}
+
+#ex04 {
+  transform: scaleY(0.5);
+}
+
+#ex05 {
+  transform: scale(1.5);
+}
+
+#ex06 {
+  transform: scale(1.5, 1.5);
+}
+
+#ex07 {
+  transform: scale(0.5, 1.5);
+}
+
+#ex08 {
+  transform: scale(1.5, 0.5);
+}
+
+#ex09 {
+  transform: rotateY(45deg) scaleZ(0.5);
+}
+
+#ex10 {
+  transform: rotateY(45deg) scale3d(0.5, 0.5, 0.5);
+}

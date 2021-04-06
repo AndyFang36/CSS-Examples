@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+figure {
+  padding: 0.5em;
+  margin: 3em;
+  border: thin dashed black;
+  text-align: center;
+}
+
+img {
+  width: 10em;
+  height: auto;
+}
+
+figure:nth-child(1) > img {
+  filter: grayscale(0);
+}
+
+figure:nth-child(2) > img {
+  filter: grayscale(25%);
+}
+
+figure:nth-child(3) > img {
+  filter: grayscale(50%);
+}
+
+figure:nth-child(4) > img {
+  filter: grayscale(75%);
+}
+
+figure:nth-child(5) > img {
+  filter: grayscale(1);
+}

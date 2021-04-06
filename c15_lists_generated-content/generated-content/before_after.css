@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3rem;
+  background-image: linear-gradient(90deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+/* Grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: auto;
+  height: 0.1em;
+  margin: 2em 0;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  width: auto;
+  height: auto;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: lightgray;
+}
+
+/* Heading */
+html > body h1 {
+  font-size: 3em
+}
+
+html > body h2 {
+  border: thin dashed red;
+  font-size: 2.4em;
+}
+
+html > body h3 {
+  font-size: 1.92em
+}
+
+html > body h4 {
+  font-size: 1.536em
+}
+
+html > body h5 {
+  font-size: 1.2288em
+}
+
+html > body h6 {
+  font-size: 0.98304em
+}
+
+/* Link */
+html > body a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body a:link {
+  color: blue;
+}
+
+html > body a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body a:focus {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:hover {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:active {
+  color: lightgreen;
+}
+
+/* Others */
+html > body > section > h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+
+/* Generating Text Content */
+#section-1 > p > a[href]::before {
+  content: "(link) ";
+}
+
+
+/* Generating icons */
+#section-2 > p > a:last-child::after {
+  content: url("./Image/download_16x16.png");
+}
+
+
+/* Generating Block-Level Content */
+#section-3 > h2::before {
+  content: "New Section (inline)";
+  display: inline;
+  font-size: 60%;
+  color: #6BE899;
+}
+
+/*#section-3 > h2::before {
+  content: "New Section (block)";
+  display: block;
+  color: #FF6A00;
+}*/
+
+#section-3 > h2::after {
+  content: "New Section (inline)";
+  display: inline;
+  font-size: 60%;
+  color: #6BE899;
+}
+
+/*
+#section-3 > h2::after {
+  content: "New Section (block)";
+  display: block;
+  color: #FF6A00;
+}*/
+
+
+/* Taking placement into account */
+#section-4 > h2::before {
+  content: "New Heading (block)";
+  display: block;
+  border-bottom: thin solid deepskyblue;
+  font-size: 60%;
+  color: #FF6A00;
+}
+
+
+/* Changing the generated content to be inline */
+#section-5 > h2::before{
+  content: "New Heading (inline)";
+  display: inline;
+  border-bottom: thin dotted dodgerblue;
+  margin-bottom: 1em;
+  font-size: 60%;
+  color: #6BE899;
+}

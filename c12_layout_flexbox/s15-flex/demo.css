@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: white;
+  font-family: "Fira Code Retina", monospace;
+}
+
+body {
+  margin: 0.5em;
+  padding: 2em 100px;
+  text-align: center;
+  border: thin solid #B4B4B4;
+  border-radius: 0.6em;
+  box-shadow: 0.1em 0.1em 0.1em gray;
+  background-image: linear-gradient(to top, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+div {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body > section {
+  border: thin dashed black;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section > article > div {
+  display: flex;
+  border: thin dashed red;
+  padding: 3px;
+}
+
+html > body > hr {
+  width: 100%;
+  height: 0.1em;
+  margin: 3em 0;
+  border-width: 0;
+  border-radius: 0.2em;
+  background-image: linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+article {
+  width: 600px;
+  margin: 1.5em 0;
+}
+
+article:nth-of-type(odd) {
+  width: 300px;
+}
+
+div > div {
+  outline: 1px solid;
+  margin: 3px;
+  line-height: 1.5;
+  min-height: 40px;
+}
+
+code {
+  font-family: "Fira Code Retina", monospace;
+}
+
+.initial div div {
+  flex: 0 1 auto;
+}
+
+.auto div > div {
+  flex: auto;
+}
+
+.none div > div {
+  flex: none;
+}
+
+.hundred div > div {
+  width: 50px;
+}
+
+article.flex3 > div > div {
+  flex: 3;
+}
+
+p {
+  margin-top: 0;
+  text-align: left;
+  padding-left: 100px;
+}

@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3rem;
+  background-image: linear-gradient(90deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+/* Grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: auto;
+  height: 0.1em;
+  margin: 2em 0;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  width: auto;
+  height: auto;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: lightgray;
+}
+
+/* Heading */
+html > body h1 {
+  font-size: 3em;
+}
+
+html > body h2 {
+  font-size: 2.4em;
+}
+
+html > body h3 {
+  font-size: 1.92em;
+}
+
+html > body h4 {
+  font-size: 1.536em;
+}
+
+html > body h5 {
+  font-size: 1.2288em;
+}
+
+html > body h6 {
+  font-size: 0.98304em;
+}
+
+/* Link */
+html > body a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body a:link {
+  color: blue;
+}
+
+html > body a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body a:focus {
+  color: red;
+  outline: 0.2em inset red;
+}
+
+html > body a:hover {
+  color: red;
+  outline: 0.2em inset red;
+}
+
+html > body a:active {
+  color: lightgreen;
+}
+
+/* Others */
+html > body > section > h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+html > body li {
+  color: #28A745;
+}
+
+html > body > section > hgroup {
+  color: #FF6A00;
+}
+
+
+/* Counting the items */
+#section-1 > list[type="ordered"] {
+  counter-reset: ordered 0;
+}
+
+#section-1 > list[type="ordered"] > item {
+  display: block;
+}
+
+#section-1 > list[type="ordered"] > item::before {
+  counter-increment: ordered 1;
+  content: counter(ordered) ". ";
+  margin: 0.25em 0;
+}
+
+
+/* Adding Counters to Headings */
+#section-2 > hgroup > h1 {
+  counter-reset: section subsec;
+  counter-increment: chapter;
+}
+
+#section-2 > hgroup > h1::before {
+  content: counter(chapter) ". ";
+}
+
+#section-2 > hgroup > h2 {
+  counter-reset: subsec;
+  counter-increment: section;
+}
+
+#section-2 > hgroup > h2::before {
+  content: counter(chapter) "." counter(section) ". ";
+}
+
+#section-2 > hgroup > h3 {
+  counter-increment: subsec;
+}
+
+#section-2 > hgroup > h3::before {
+  content: counter(chapter) "." counter(section) "." counter(subsec) ". ";
+}
+
+
+/* Changing Counter Styles */
+#section-3 > hgroup > h1 {
+  counter-reset: section subsec;
+  counter-increment: chapter;
+}
+
+#section-3 > hgroup > h1::before {
+  content: counter(chapter, upper-alpha) ". ";
+}
+
+#section-3 > hgroup > h2 {
+  counter-reset: subsec;
+  counter-increment: section;
+}
+
+#section-3 > hgroup > h2::before {
+  content: counter(chapter, upper-alpha) "." counter(section) ". ";
+}
+
+#section-3 > hgroup > h3 {
+  counter-increment: subsec;
+}
+
+#section-3 > hgroup > h3::before {
+  content: counter(chapter, upper-alpha) "." counter(section) "." counter(subsec, lower-roman) ". ";
+}
+
+
+/* Nested counters */
+#section-4 ol {
+  counter-reset: ordered;
+  margin-left: 2.5em;
+  list-style: none;
+}
+
+#section-4 ol li:before {
+  counter-increment: ordered;
+  content: counters(ordered, ".") ": ";
+}

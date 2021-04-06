@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Structure Pseudo-Classes Selector</title>
+    <base href="#" target="_self"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Andy"/>
+    <meta name="reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="keyword" content="*, *, *"/>
+    <meta name="description" content="*"/>
+    <meta name="generator" content="WebStorm 2020.2"/>
+    <meta name="copyright" content="Copyright © 2020 ***."/>
+    <meta http-equiv="refresh" content="*;url=#"/>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <style type="text/css">
+      hr {
+        margin: 2em auto;
+        background-color: lightslategray;
+      }
+
+      /* :root */
+      *:root {
+        border: 0.5rem dotted gray;
+      }
+
+      body {
+        padding: 1em;
+        border: 0.5em solid black;
+        border-radius: 0.5em;
+      }
+
+
+      /* :empty */
+      p:empty {
+        display: none;
+      }
+
+      a {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+
+      /* :only-child & :only-of-type */
+      #article-0 img[src*="w3c"] {
+        height: 1em;
+        width: auto;
+      }
+
+      #article-0 > a[href] img:only-child {
+        outline: thick inset red;
+      }
+
+      #article-0 > a[href] img:only-of-type {
+        outline: medium inset #00FFFF;
+      }
+
+
+      /* :first-child & :last-child */
+      #article-1 > p:first-child {
+        font-weight: bold;
+      }
+
+      #article-1 > ul > li:first-child {
+        color: #8A2BE2;
+      }
+
+      #article-1 > ul > li:last-child {
+        color: #E0A800;
+      }
+
+
+      /* first-of-type & last-of-type */
+      #article-2 > table {
+        text-align: center;
+        vertical-align: center;
+        background-color: #686868;
+      }
+
+      #article-2 > p:first-of-type {
+        color: #00FFFF;
+      }
+
+      #article-2 > p:last-of-type {
+        color: orangered;
+      }
+
+
+      /* nth-child() & nth-last-child() */
+      #article-3 > p:nth-child(1) {
+        color: red;
+      }
+
+      #article-3 > p:nth-child(2) {
+        color: red;
+      }
+
+      #article-3 > ul > li:nth-child(2) {
+        text-transform: uppercase;
+      }
+
+      #article-3 > #section-2 > ol > li:nth-child(3n+1) {
+        background-color: #9FCDFF;
+      }
+
+      #article-3 > table > tbody > tr:nth-child(odd) {
+        background-color: #9FCDFF;
+      }
+
+      #article-3 > table > tbody > tr:nth-child(even) {
+        background-color: navajowhite;
+      }
+
+      #article-3 > ol > li:nth-child(3n + 3) {
+        border-left: 0.8em solid black;
+      }
+
+      #article-3 > ol > li:nth-last-child(4n - 1) {
+        border-right: 0.8em solid gray;
+        background-color: silver;
+      }
+
+
+      /* nth-of-type() & nth-last-of-type() */
+      #article-4 a {
+        display: inline;
+      }
+
+      #article-4 > p > a[href]:nth-of-type(even) {
+        color: white;
+        background-color: blue;
+        padding: 0 0.25em;
+      }
+
+      #article-4 > p > a[href]:nth-last-of-type(even) {
+        color: yellow;
+        background-color: black;
+        padding: 0 0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    This is the body of the document.
+    <hr/>
+    <p></p>
+    <p></p>
+    <p><span></span></p>
+    <p><!—- a comment --></p>
+    <hr/>
+    <article id="article-0">
+      <a href="https://w3.org/">
+        <img src="image/w3c.jpg" alt="W3C">
+      </a>
+      <a href="https://w3.org/">
+        <img src="image/w3c.jpg" alt="">
+        The W3C
+      </a>
+      <a href="https://w3.org/">
+        <img src="image/w3c.jpg" alt="">
+        <em>The W3C</em>
+      </a>
+      <a href="https://w3.org/">
+      <span>
+        <img src="image/w3c.jpg" alt="W3C">
+      </span>
+      </a>
+      <a href="https://w3.org/">
+        A link to <span>the
+      <img src="image/w3c.jpg" alt="W3C">
+      web</span> site
+      </a>
+      <a href="https://w3.org/">
+        <span>*</span>
+        <img src="image/w3c.jpg" alt="W3C"/>
+      </a>
+    </article>
+    <hr/>
+    <article id="article-1">
+      <p>These are the necessary steps:</p>
+      <ul>
+        <li>Insert key</li>
+        <li>Turn key <strong>clockwise</strong></li>
+        <li>Push accelerator</li>
+      </ul>
+      <p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+    </article>
+    <hr/>
+    <article id="article-2">
+      <h1>This Is Heading</h1>
+      <p>paragraph1...</p>
+      <table>
+        <caption>A Simple Table</caption>
+        <thead>
+          <tr>
+            <th>Fruits</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apple</td>
+            <td>$1</td>
+          </tr>
+          <tr>
+            <td>Banana</td>
+            <td>$1.5</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Date: 2020-08-27</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p>paragraph2...</p>
+      <p>paragraph3...</p>
+      <p>paragraph4...</p>
+    </article>
+    <hr/>
+    <article id="article-3">
+      <p>These are the necessary steps:</p>
+      <ul>
+        <li>Insert key</li>
+        <li>Turn key <strong>clockwise</strong></li>
+        <li>Push accelerator</li>
+      </ul>
+      <p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+      <br/>
+      <section id="section-2">
+        <p>These are the necessary steps:</p>
+        <ol>
+          <li>Insert key</li>
+          <li>Turn key <strong>clockwise</strong></li>
+          <li>Grip steering wheel with hands</li>
+          <li>Push accelerator</li>
+          <li>Steer vehicle</li>
+          <li>Use brake as necessary</li>
+          <li>seven</li>
+          <li>eight</li>
+          <li>nine</li>
+          <li>ten</li>
+        </ol>
+        <p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+      </section>
+      <br/>
+      <table>
+        <caption>A Simple Table</caption>
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Post</th>
+            <th>Capital</th>
+            <th>State Bird</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alabama</td><td>AL</td><td>Montgomery</td><td>Yellowhammer</td>
+          </tr>
+          <tr>
+            <td>Alaska</td><td>AK</td><td>Juneau</td><td>Willow Ptarmigan</td>
+          </tr>
+          <tr>
+            <td>Arizona</td><td>AZ</td><td>Phoenix</td><td>Cactus Wren</td>
+          </tr>
+          <tr>
+            <td>Arkansas</td><td>AR</td><td>Little Rock</td><td>Mockingbird</td>
+          </tr>
+          <tr>
+            <td>California</td><td>CA</td><td>Sacramento</td><td>California Quail</td>
+          </tr>
+          <tr>
+            <td>Colorado</td><td>CO</td><td>Denver</td><td>Lark Bunting</td>
+          </tr>
+          <tr>
+            <td>Connecticut</td><td>CT</td><td>Hartford</td><td>American Robin</td>
+          </tr>
+          <tr>
+            <td>Delaware</td><td>DE</td><td>Dover</td><td>Blue Hen Chicken</td>
+          </tr>
+          <tr>
+            <td>Florida</td><td>FL</td><td>Tallahassee</td><td>Northern Mockingbird</td>
+          </tr>
+          <tr>
+            <td>Georgia</td><td>GA</td><td>Atlanta</td><td>Brown Thrasher</td>
+          </tr>
+          <tr>
+            <td>Hawaii</td><td>HI</td><td>Honolulu</td><td>Nēnē</td>
+          </tr>
+          <tr>
+            <td>Idaho</td><td>ID</td><td>Boise</td><td>Mountain Bluebird</td>
+          </tr>
+          <tr>
+            <td>Illinois</td><td>IL</td><td>Springfield</td><td>Northern Cardinal</td>
+          </tr>
+          <tr>
+            <td>Indiana</td><td>IN</td><td>Indianapolis</td><td>Northern Cardinal</td>
+          </tr>
+          <tr>
+            <td>Iowa</td><td>IA</td><td>Des Moines</td><td>Eastern Goldfinch</td>
+          </tr>
+          <tr>
+            <td>Kansas</td><td>KS</td><td>Topeka</td><td>Western Meadowlark</td>
+          </tr>
+          <tr>
+            <td>Kentucky</td><td>KY</td><td>Frankfort</td><td>Northern Cardinal</td>
+          </tr>
+          <tr>
+            <td>Louisiana</td><td>LA</td><td>Baton Rouge</td><td>Brown Pelican</td>
+          </tr>
+          <tr>
+            <td>Maine</td><td>ME</td><td>Augusta</td><td>Black-Capped Chickadee</td>
+          </tr>
+          <tr>
+            <td>Maryland</td><td>MD</td><td>Annapolis</td><td>Baltimore Oriole</td>
+          </tr>
+          <tr>
+            <td>Massachusetts</td><td>MA</td><td>Boston</td><td>Black-capped Chickadee</td>
+          </tr>
+          <tr>
+            <td>Michigan</td><td>MI</td><td>Lansing</td><td>American Robin</td>
+          </tr>
+          <tr>
+            <td>Minnesota</td><td>MN</td><td>Saint Paul</td><td>Common Loon</td>
+          </tr>
+          <tr>
+            <td>Mississippi</td><td>MS</td><td>Jackson</td><td>Northern Mockingbird</td>
+          </tr>
+          <tr>
+            <td>Missouri</td><td>MO</td><td>Jefferson City</td><td>Eastern Bluebird</td>
+          </tr>
+          <tr>
+            <td>Montana</td><td>MT</td><td>Helena</td><td>Western Meadowlark</td>
+          </tr>
+          <tr>
+            <td>Nebraska</td><td>NE</td><td>Lincoln</td><td>Western Meadowlark</td>
+          </tr>
+          <tr>
+            <td>Nevada</td><td>NV</td><td>Carson City</td><td>Mountain Bluebird</td>
+          </tr>
+          <tr>
+            <td>New Hampshire</td><td>NH</td><td>Concord</td><td>Purple Finch</td>
+          </tr>
+          <tr>
+            <td>New Jersey</td><td>NJ</td><td>Trenton</td><td>Eastern Goldfinch</td>
+          </tr>
+          <tr>
+            <td>New Mexico</td><td>NM</td><td>Santa Fe</td><td>Roadrunner</td>
+          </tr>
+          <tr>
+            <td>New York</td><td>NY</td><td>Albany</td><td>Eastern Bluebird</td>
+          </tr>
+          <tr>
+            <td>North Carolina</td><td>NC</td><td>Raleigh</td><td>Northern Cardinal</td>
+          </tr>
+          <tr>
+            <td>North Dakota</td><td>ND</td><td>Bismarck</td><td>Western Meadowlark</td>
+          </tr>
+          <tr>
+            <td>Ohio</td><td>OH</td><td>Columbus</td><td>Northern Cardinal</td>
+          </tr>
+          <tr>
+            <td>Oklahoma</td><td>OK</td><td>Oklahoma City</td><td>Scissor-Tailed Flycatcher</td>
+          </tr>
+          <tr>
+            <td>Oregon</td><td>OR</td><td>Salem</td><td>Western Meadowlark</td>
+          </tr>
+          <tr>
+            <td>Pennsylvania</td><td>PA</td><td>Harrisburg</td><td>Ruffed Grouse</td>
+          </tr>
+          <tr>
+            <td>Rhode Island</td><td>RI</td><td>Providence</td><td>Rhode Island Red Chicken</td>
+          </tr>
+          <tr>
+            <td>South Carolina</td><td>SC</td><td>Columbia</td><td>Carolina Wren</td>
+          </tr>
+          <tr>
+            <td>South Dakota</td><td>SD</td><td>Pierre</td><td>Ring-Necked Pheasant</td>
+          </tr>
+          <tr>
+            <td>Tennessee</td><td>TN</td><td>Nashville</td><td>Northern Mockingbird</td>
+          </tr>
+          <tr>
+            <td>Texas</td><td>TX</td><td>Austin</td><td>Northern Mockingbird</td>
+          </tr>
+          <tr>
+            <td>Utah</td><td>UT</td><td>Salt Lake City</td><td>California Gull</td>
+          </tr>
+          <tr>
+            <td>Vermont</td><td>VT</td><td>Montpelier</td><td>Hermit Thrush</td>
+          </tr>
+          <tr>
+            <td>Virginia</td><td>VA</td><td>Richmond</td><td>Northern Cardinal</td>
+          </tr>
+          <tr>
+            <td>Washington</td><td>WA</td><td>Olympia</td><td>Willow Goldfinch</td>
+          </tr>
+          <tr>
+            <td>West Virginia</td><td>WV</td><td>Charleston</td><td>Northern Cardinal</td>
+          </tr>
+          <tr>
+            <td>Wisconsin</td><td>WI</td><td>Madison</td><td>American Robin</td>
+          </tr>
+          <tr>
+            <td>Wyoming</td><td>WY</td><td>Cheyenne</td><td>Western Meadowlark</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Date: 2020-08-28</td>
+          </tr>
+        </tfoot>
+      </table>
+      <br/>
+      <ol>
+        <li class="g">
+          <div>The Sun</div>
+        </li>
+        <li class="m">
+          <div>V645 Centauri</div>
+        </li>
+        <li class="g">
+          <div>Alpha Centauri A</div>
+        </li>
+        <li class="k">
+          <div>Alpha Centauri B</div>
+        </li>
+        <li class="m">
+          <div>Barnard's Star</div>
+        </li>
+        <li class="m">
+          <div>Wolf 359</div>
+        </li>
+        <li class="m">
+          <div>Lalande 21185</div>
+        </li>
+        <li class="a">
+          <div>Sirius A</div>
+        </li>
+        <li class="a">
+          <div>Sirius B</div>
+        </li>
+        <li class="m">
+          <div>Luyten 726-8 A</div>
+        </li>
+        <li class="m">
+          <div>Luyten 726-8 B</div>
+        </li>
+        <li class="m">
+          <div>Ross 154</div>
+        </li>
+        <li class="m">
+          <div>Ross 248</div>
+        </li>
+        <li class="k">
+          <div>Epsilon Eridani</div>
+        </li>
+        <li class="m">
+          <div>Lacaille 9352</div>
+        </li>
+        <li class="m">
+          <div>Ross 128</div>
+        </li>
+        <li class="m">
+          <div>EZ Aquarii A</div>
+        </li>
+        <li class="m">
+          <div>EZ Aquarii B</div>
+        </li>
+        <li class="m">
+          <div>EZ Aquarii C</div>
+        </li>
+        <li class="f">
+          <div>Procyon A</div>
+        </li>
+        <li class="a">
+          <div>Procyon B</div>
+        </li>
+        <li class="k">
+          <div>61 Cygni A</div>
+        </li>
+        <li class="k">
+          <div>61 Cygni B</div>
+        </li>
+        <li class="m">
+          <div>Struve 2398 A</div>
+        </li>
+        <li class="m">
+          <div>Struve 2398 B</div>
+        </li>
+      </ol>
+    </article>
+    <hr/>
+    <article id="article-4">
+      <p>
+        ConHugeCo is the industry leader of <a href="#">web</a>-enabled <a href="#">ROI metrics</a>.
+        Quick: do you have a scalable plan of action for managing emerging <a href="#">
+        infomediaries</a>? We invariably cultivate <a href="#">enterprise</a> eyeballs.
+        That is an amazing achievement taking into account <a href="#">this year’s financial state
+        of things</a>! We believe we know that if you <a href="#">strategize</a> globally then you
+        may also enhance <a href="#">interactively</a>. The <a href="#">aptitude</a> to <a href="#">
+        strategize iteravely</a> leads to the power to <a href="#">transition globally</a>. The <a
+        href="#">accounting</a> factor is dynamic. If all of this sounds amazing to you, that’s
+        because it is! Our <a href="#">feature set</a> is unmatched, but our <a href="#">real-time
+        structuring</a> and <a href="#">non-complex operation</a> is always considered <a href="#">
+        an amazing achievement</a>. The <a href="#">paradigms factor</a> is <a href="#">fractal</a>
+        . We apply the proverb “Absence makes the heart grow fonder” not only to <a href="#">our
+        partnerships</a> but our power to <a href="#">reintermediate</a>. What does the term
+        “global” really mean? Do you have a game plan to become <a href="#">C2C2C</a>? We will <a
+        href="#">monetize</a> the ability of <a href="#">web services</a> to maximize.
+      </p>
+      <p><small>(Text courtesy http://andrewdavidson.com/gibberish/)</small></p>
+    </article>
+    <script type="text/javascript" src=""></script>
+  </body>
+</html>

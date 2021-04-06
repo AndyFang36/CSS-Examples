@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Dynamic Pseudo-Class Selector</title>
+    <base href="#" target="_self"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Andy"/>
+    <meta name="reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="keyword" content="*, *, *"/>
+    <meta name="description" content="*"/>
+    <meta name="generator" content="WebStorm 2020.2"/>
+    <meta name="copyright" content="Copyright © 2020 *."/>
+    <meta http-equiv="refresh" content="#;url=#"/>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <style type="text/css">
+      input:focus {
+        font-weight: bold;
+        background-color: silver;
+      }
+
+      h1 {
+        margin: 0 0 0.25em;
+      }
+
+      td {
+        vertical-align: top;
+        padding: 1em 0.33em;
+      }
+
+      .sidebar {
+        width: 10em;
+        border-radius: 0.3em;
+        background-color: navajowhite;
+      }
+
+      .main {
+        background-color: #E0A800;
+      }
+
+      a:link, a:visited {
+        font-size: 1em;
+      }
+
+      a:hover {
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <th>Name</th>
+          <td><label><input type="text"></label></td>
+        </tr>
+        <tr>
+          <th>Title</th>
+          <td><label><input type="text"></label></td>
+        </tr>
+        <tr>
+          <th>E-mail</th>
+          <td><label><input type="text"></label></td>
+        </tr>
+      </table>
+    </form>
+    <table>
+      <tr>
+        <td class="sidebar">
+          <a href="#">css-tricks.com</a><br>
+          <a href="#">lea.verou.me</a><br>
+          <a href="#">meyerweb.com</a><br>
+          <a href="#">tantek.com</a><br>
+          <a href="#">zeldman.com</a><br>
+        </td>
+        <td class="main">
+          <h1>Web Blogs</h1>
+          <p>
+            These are the <a href="#">web logs</a> ("blogs") I visit a lot. They're all written by
+            people who know a lot about Web design and <a href="#">CSS</a> in general. By reading
+            them I can get a sense of the trends in design and thinking about document structure.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" src=""></script>
+  </body>
+</html>
+
+
+<!--------------------------------------------------------------------------------------------------
+:link
+      Refers to any anchor that is a hyperlink (i.e., has an href attribute) and points to an
+      address that has not been visited.
+
+:visited
+         Refers to any anchor that is a hyperlink to an already visited address. For security
+         reasons, the styles that can be applied to visited links are severely limited.
+
+:focus
+       Refers to any element that currently has the input focus—i.e., can accept keyboard input or
+       be activated in some way.
+
+:hover
+       Refers to any element over which the mouse pointer is placed—e.g., a hyperlink over which
+       the mouse pointer is hovering.
+
+:active
+        Refers to any element that has been activated by user input—e.g., a hyperlink on which a
+        user clicks during the time the mouse button is held down.
+--------------------------------------------------------------------------------------------------->

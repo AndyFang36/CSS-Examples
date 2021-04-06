@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* as if flex: 0 1 value; were set */
+div {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+article {
+  width: 540px;
+  box-sizing: content-box;
+  margin: auto;
+}
+
+article > div {
+  display: flex;
+  outline: 1px dashed;
+  padding: 3px;
+  min-height: 100px;
+  box-sizing: content-box;
+}
+
+div > div {
+  outline: 1px solid;
+  margin: 3px;
+  padding: 40px 0;
+  font-size: 1rem;
+  box-sizing: content-box;
+}
+
+body {
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Grid Line</title>
+    <base href="#" target="_self"/>
+    <meta charset="UTF-8"/>
+    <meta name="Author" content="Andy"/>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background-color: gray;
+      }
+
+      html > body {
+        padding: 0.6em;
+        background-color: white;
+      }
+
+      /*  */
+      div {
+        display: grid;
+        grid-template-columns:
+          [line1 start] 8em [line2] 8em [line3] 8em [line4] 8em [line5] 8em [line6 end];
+        grid-template-rows:
+          [line1 start]
+          5em
+          [line2]
+          5em
+          [line3]
+          5em
+          [line4 end];
+      }
+
+      div > .grid-item {
+        border: thin dashed black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+      <span class="grid-item"></span>
+    </div>
+  </body>
+</html>

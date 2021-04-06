@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+html > body {
+  margin: 100px;
+}
+
+html > body > div {
+  border: thin dashed red;
+  float: left;
+  position: relative;
+  margin: 50px;
+}
+
+html > body > div > img {
+  height: 150px;
+  width: 150px;
+  vertical-align: bottom;
+  opacity: 70%;
+}
+
+html > body > div > img#ex01 {
+  transform: perspective(100px) rotateY(-45deg);
+}
+
+html > body > div > img#ex02 {
+  transform: perspective(250px) rotateY(-45deg);
+}
+
+html > body > div > img#ex03 {
+  transform: perspective(500px) rotateY(-45deg);
+}
+
+html > body > div > img#ex04 {
+  transform: perspective(1250px) rotateY(-45deg);
+}
+
+html > body > div > span {
+  position: absolute;
+  top: 115%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  white-space: pre;
+  font: 1em "Anadale Mono", monospace;
+}

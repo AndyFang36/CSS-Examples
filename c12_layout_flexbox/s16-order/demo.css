@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+html {
+  font-family: "Fira Code Retina", monospace;
+  background-color: darkgray;
+}
+
+body {
+  padding: 100px;
+  font-size: 3em;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+#ol-1 > li:nth-of-type(6) {
+  order: 1;
+  background-color: orange;
+}
+
+#ol-1 > li:nth-of-type(7) {
+  order: -1;
+  background-color: lightgreen;
+}
+
+ol, li {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+ol {
+  display: inline-flex;
+  border: 1px dashed;
+  padding: 1px;
+  list-style-type: none;
+  counter-reset: num;
+}
+
+li {
+  border: 1px solid;
+  height: 50px;
+  margin: 1px;
+  line-height: 50px;
+  min-width: 1.5em;
+  text-align: center;
+  counter-increment: num;
+}
+
+li:before {
+  content: counter(num);
+}
+
+
+/*  */
+ol#second > ul {
+  display: inline-flex;
+}
+
+ol#second > li:nth-of-type(3n-1) {
+  order: 1;
+  background-color: rgb(40, 255, 0);
+}
+
+ol#second > li:nth-of-type(3n+1) {
+  order: -1;
+  background-color: rgb(255, 219, 49);
+}
+
+ol#second {
+  display: inline-flex;
+  border: 1px dashed;
+  padding: 1px;
+  list-style-type: none;
+  counter-reset: num;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+ol#second > li {
+  border: 1px solid;
+  height: 50px;
+  margin: 1px;
+  line-height: 50px;
+  min-width: 1.5em;
+  text-align: center;
+  counter-increment: num;
+}

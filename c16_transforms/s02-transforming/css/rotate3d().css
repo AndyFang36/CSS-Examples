@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body {
+  margin: 100px;
+}
+
+div {
+  border: 1px solid red;
+  float: left;
+  position: relative;
+  margin: 50px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+
+div:hover {
+  transform: rotateY(360deg);
+  transition: 1s;
+}
+
+div:nth-child(5) {
+  clear: left;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  vertical-align: bottom;
+  opacity: 0.9;
+}
+
+span {
+  position: absolute;
+  top: 125%;
+  left: -25%;
+  width: 150%;
+  text-align: center;
+  white-space: pre;
+  font: 17px "Anadale Mono", monospace;
+}
+
+#ex01 {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+#ex02 {
+  transform: rotate3d(0, 1, 0, 45deg);
+}
+
+#ex03 {
+  transform: rotate3d(1, 0, 0, 45deg);
+}

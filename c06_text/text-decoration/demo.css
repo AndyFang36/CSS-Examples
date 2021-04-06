@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+html {
+  background-color: dimgray;
+}
+
+html > body {
+  font-size: x-large;
+  background-color: ghostwhite;
+}
+
+html > body hr {
+  width: auto;
+  height: 0.1em;
+  margin: 2em auto;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+span {
+  color: #000000;
+}
+
+p.underline {
+  color: #FF0000;
+  text-decoration: underline;
+}
+
+p.overline {
+  color: #00DAFF;
+  text-decoration: overline;
+}
+
+p.line-through {
+  color: #0ADE96;
+  text-decoration: line-through;
+}
+
+p.blink {
+  text-decoration: blink;
+}
+
+p.none {
+  text-decoration: none;
+}
+
+
+/* strange behavior */
+p#strange1 {
+  color: #000000;
+  text-decoration: underline;
+}
+
+p#strange1 strong {
+  font-size: larger;
+  color: #FF0000;
+  text-decoration: none;
+}
+
+p#strange2 {
+  color: #000000;
+  text-decoration: underline;
+}
+
+p#strange2 strong {
+  font-size: larger;
+  color: #FF0000;
+  text-decoration: underline;
+}

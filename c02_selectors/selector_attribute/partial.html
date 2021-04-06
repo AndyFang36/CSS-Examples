@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Partial Attribute Selector</title>
+    <base href="#" target="_self"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Andy"/>
+    <meta name="reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="keyword" content="#, #, #"/>
+    <meta name="description" content="#"/>
+    <meta name="generator" content="WebStorm 2020.2"/>
+    <meta name="copyright" content="Copyright © 2020 #."/>
+    <meta http-equiv="refresh" content="#;url=#"/>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <style type="text/css">
+      div {
+        display: inline;
+      }
+
+      div[class~="barren"] {
+        color: orangered;
+      }
+
+      div[class*="cloud"] {
+        color: dodgerblue
+      }
+
+      a {
+        display: block;
+      }
+
+      a[href^="https:"] {
+        font-weight: bold;
+      }
+
+      a[href^="mailto:"] {
+        font-style: italic;
+      }
+
+      a[href$=".pdf"] {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="barren rocky">Mercury</div>
+    <div class="cloudy barren">Venus</div>
+    <div class="life-bearing cloudy">Earth</div>
+    <hr/>
+    <a href="http://w3.org/">W3C home page</a>
+    <a href="https://example.com/">My banking login screen</a>
+    <a href="http://example.com/">O’Reilly &amp; Associates home page</a>
+    <a href="mailto:me@example.com">Send mail to me@example.com</a>
+    <a href="http://example.com/">Wikipedia (English)</a>
+    <hr/>
+    <a href="http://w3.org/">Home page</a>
+    <a href="https://example.com/">FAQ</a>
+    <a href="http://example.com/.pdf">Printable instructions</a>
+    <a href="http://example.com/.pdf">Detailed warranty</a>
+    <a href="mailto:me@example.com">Contact us</a>
+    <script type="text/javascript" src=""></script>
+  </body>
+</html>
+
+
+<!--------------------------------------------------------------------------------------------------
+[foo~="bar"]
+             Selects any element with an attribute foo whose value contains the word bar in a
+             space-separated list of words
+
+[foo*="bar"]
+             Selects any element with an attribute foo whose value contains the substring bar
+
+[foo^="bar"]
+             Selects any element with an attribute foo whose value begins with bar
+
+[foo$="bar"]
+             Selects any element with an attribute foo whose value ends with bar
+
+[foo|="bar"]
+             Selects any element with an attribute foo whose value starts with bar followed by a
+             dash (U+002D) or whose value is exactly equal to bar
+--------------------------------------------------------------------------------------------------->

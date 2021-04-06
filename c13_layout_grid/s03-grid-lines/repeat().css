@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00C9FF;
+  background-color: black;
+}
+
+html {
+  padding: 0.3em;
+  background-color: gray;
+}
+
+
+/* Grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: white;
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  width: auto;
+  height: auto;
+  margin-bottom: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: #E9E8E8;
+}
+
+
+/* Heading */
+h1 {
+  font-size: 3em
+}
+
+h2 {
+  font-size: 2.4em
+}
+
+h3 {
+  font-size: 1.92em
+}
+
+h4 {
+  font-size: 1.536em
+}
+
+h5 {
+  font-size: 1.2288em
+}
+
+h6 {
+  font-size: 0.98304em
+}
+
+
+/* Others*/
+section > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container {
+  width: auto;
+  height: 10rem;
+  display: grid;
+  background-image: linear-gradient(to right, #00DBDE 0%, #FC00FF 100%);
+}
+
+.item {
+  position: relative;
+  border: thin dashed red;
+  background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+.item > img {
+  display: block;
+}
+
+.item > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+
+/* Repeating A Track Pattern */
+#section-1 > .container {
+  grid-template-rows:
+    []
+    1fr
+    [];
+  grid-template-columns: repeat(3, 2rem 1fr 1fr);
+}
+
+
+/* Repeated Columns with Named Grid Lines */
+#section-2 > .container {
+  grid-template-rows:
+    [start]
+    1fr
+    [end];
+  grid-template-columns: repeat(3, [] 2rem [start] 2fr [end] 1fr []) 2rem [last];
+}
+
+
+/* Auto-filling Rows at Three Different Heights */
+#section-3 > .outer {
+  width: auto;
+  height: 25rem;
+  grid-template-rows:
+    []
+    fit-content(1ch)
+    []
+    1fr
+    [];
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#section-3 > .outer > label {
+  text-align: center;
+}
+
+#section-3 > .outer > .row-2.item {
+  padding: 1rem;
+}
+
+#section-3 > .outer > .row-2.item > .inner {
+  width: auto;
+  grid-template-columns: [start] 1fr [end];
+}
+
+#section-3 > .outer > .row-2.item:nth-child(4) > .inner {
+  height: 11rem;
+  grid-template-rows: repeat(auto-fill, 5rem);
+}
+
+#section-3 > .outer > .row-2.item:nth-child(5) > .inner {
+  height: 18rem;
+  grid-template-rows: repeat(auto-fill, 5rem);
+}
+
+#section-3 > .outer > .row-2.item:nth-child(6) > .inner {
+  height: 21rem;
+  grid-template-rows: repeat(auto-fill, 5rem);
+}
+
+
+/* Auto-filling columns next to fixed columns */
+#section-4 > .container-1 {
+  width: 80em;
+  grid-template-rows:
+    [start]
+    1fr
+    [end];
+  grid-template-columns: repeat(3, 20em) repeat(auto-fill, 2em);
+}
+
+#section-4 > .container-2 {
+  width: 64em;
+  grid-template-rows:
+    [start]
+    1fr
+    [end];
+  grid-template-columns: repeat(auto-fill, 2em) repeat(3, 20em);
+}
+
+
+/* Auto-fill versus auto-fit */
+#section-5 > .container-1 {
+  grid-template-rows:
+    [row-1]
+    10em
+    [row-2];
+  grid-template-columns: repeat(auto-fit, 10em);
+}
+
+#section-5 > .container-2 {
+  grid-template-rows:
+    [row-1]
+    10em
+    [row-2];
+  grid-template-columns: repeat(auto-fill, 10em);
+}
+
+#section-5 > .container > .item-1 {
+  grid-column: 1;
+}
+
+#section-5 > .container > .item-2 {
+  grid-column: 2;
+}
+
+#section-5 > .container > .item-3 {
+  grid-column: 4;
+}
+
+#section-5 > .container > .item-4 {
+  grid-column: 5;
+}
+
+#section-5 > .container > .item-5 {
+  grid-column: 7;
+}
+
+#section-5 > .container > .item > .label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.5rem;
+  font-size: 5rem;
+  font-family: monospace;
+  border: 1rem solid;
+  text-align: center;
+}
+
+#section-5 > .container > .item-1 > .label {
+  color: red;
+}
+
+#section-5 > .container > .item-2 > .label {
+  color: orange;
+}
+
+#section-5 > .container > .item-3 > .label {
+  color: yellow;
+}
+
+#section-5 > .container > .item-4 > .label {
+  color: cornflowerblue;
+}
+
+#section-5 > .container > .item-5 > .label {
+  color: mediumseagreen;
+}

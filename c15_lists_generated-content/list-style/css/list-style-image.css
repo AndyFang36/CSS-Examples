@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3rem;
+  background-image: linear-gradient(90deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+/* Grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  width: auto;
+  height: auto;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: lightgray;
+}
+
+/* Heading */
+html > body h1 {
+  font-size: 3em
+}
+
+html > body h2 {
+  font-size: 2.4em
+}
+
+html > body h3 {
+  font-size: 1.92em
+}
+
+html > body h4 {
+  font-size: 1.536em
+}
+
+html > body h5 {
+  font-size: 1.2288em
+}
+
+html > body h6 {
+  font-size: 0.98304em
+}
+
+/* Link */
+html > body a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body a:link {
+  color: blue;
+}
+
+html > body a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body a:focus {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:hover {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:active {
+  color: lightgreen;
+}
+
+/* Others */
+html > body label {
+  font-weight: bold;
+}
+
+html > body ol,
+html > body ul {
+  margin-left: 1.5rem;
+}
+
+html > body li {
+  font-style: italic;
+}
+
+/* Using images as markers */
+#section-1 > ul#weather_small {
+  list-style-image: url("../image/weather[small].png");
+  list-style-type: disc;
+}
+
+
+/* Using really big images as markers */
+#section-2 > ul#weather_big {
+  margin-left: 4.5rem;
+  list-style-image: url("../image/weather[big].png");
+  list-style-type: circle;
+}
+
+
+/* Switching off image markers in sub-lists */
+#section-3 > ul#file {
+  margin-left: 2.5rem;
+  list-style-image: url("../image/file.png");
+  list-style-type: disc;
+}
+
+#section-3 > ul#file > li > ul.sub {
+  list-style-image: none;
+  list-style-type: circle;
+}
+
+
+/* Gradient list markers */
+#section-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+#section-4 > ul {
+  flex-grow: 1;
+  margin: 0.5em;
+  padding: 0.5em 0.25em 0.5em 2em;
+  border: thin solid gray;
+  font-size: xx-large;
+  background-color: floralwhite;
+}
+
+ul.list-1 {
+  list-style-image: radial-gradient(
+    closest-side, orange, orange 60%, blue 60%, blue 95%, transparent
+  );
+}
+
+ul.list-2 {
+  list-style-image: linear-gradient(45deg, red, red 50%, orange 50%, orange);
+}
+
+ul.list-3 {
+  list-style-image: repeating-linear-gradient(-45deg, red, red 1px, yellow 1px, yellow 3px);
+}
+
+ul.list-4 {
+  list-style-image: radial-gradient(
+    farthest-side at bottom right,
+    lightblue,
+    lightblue 50%,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red,
+    lightblue
+  );
+}

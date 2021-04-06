@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section > figure {
+  padding: 0.5em;
+  margin: 3em;
+  border: thin dashed black;
+  text-align: center;
+}
+
+section > figure > img {
+  width: 10em;
+  height: auto;
+}
+
+section > figure > figcaption {
+  margin-top: 0.5em;
+}
+
+section > figure:nth-child(1) > img {
+  filter: invert(0);
+}
+
+section > figure:nth-child(2) > img {
+  filter: invert(0.5);
+}
+
+section > figure:nth-child(3) > img {
+  filter: invert(1);
+}

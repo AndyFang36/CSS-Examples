@@ -1,0 +1,473 @@
+@charset "UTF-8";
+
+
+@font-face {
+}
+
+
+/******************************************************** All *********************************************************/
+* {
+  /* Fundamental */
+  overflow: visible;
+  /* Floating */
+  float: none;
+  clear: none;
+  shape-outside: margin-box;
+  /* Positioning */
+  position: static;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  /* Box */
+  box-sizing: content-box;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  border: 0 solid black;
+  border-radius: 0;
+  outline: 0 solid black;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  /* Text */
+  text-decoration: none;
+  text-shadow: none;
+  white-space: normal;
+  /* Color */
+  background-color: transparent;
+  /* Transforms */
+  transform: none;
+  transform-origin: 50% 50%;
+  transform-style: flat;
+  perspective: none;
+  perspective-origin: 50% 50%;
+  backface-visibility: visible;
+  /* Altering Elements */
+  filter: none;
+  mix-blend-mode: normal;
+  background-blend-mode: normal;
+  isolation: auto;
+  clip-path: none;
+  clip-rule: nonzero;
+  mask-image: none;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+
+/******************************************************** Root ********************************************************/
+*:root {
+  /* Fundamental */
+  display: unset;
+  visibility: visible;
+  opacity: 1;
+  /* Fonts */
+  font-size: 16px;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-kerning: auto;
+  font-stretch: normal;
+  font-feature-settings: normal; /* OpenType only */
+  font-synthesis: weight style; /* Firefox only */
+  /* Text */
+  text-indent: 0;
+  text-align: start;
+  text-align-last: start;
+  line-height: 1.2;
+  vertical-align: baseline;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-rendering: auto;
+  text-shadow: none;
+  white-space: normal;
+  tab-size: 2;
+  hyphens: auto;
+  word-break: normal;
+  line-break: auto; /* CJK only */
+  overflow-wrap: normal;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  direction: ltr; /* CSS2 */
+  unicode-bidi: normal; /* CSS2 */
+  /* Box */
+  padding: 0.25rem;
+  /* Lists */
+  list-style: url("#") disc outside;
+  /* Colors / Background / Gradient */
+  color: black;
+  background-color: darkgray;
+}
+
+
+/************************************************* Grouping Contents **************************************************/
+/* Body */
+html > body {
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dividers */
+hr.static {
+  width: auto;
+  height: 0.1em;
+  margin: 2em 0.5em;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+hr.animation {
+  width: 100%;
+  height: 1em;
+  position: relative;
+  margin: 2em 0.5em;
+}
+
+hr.animation::before,
+hr.animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 50%;
+  left: 0;
+}
+
+hr.animation::before {
+  background-image: linear-gradient(
+    90deg,
+    #10111F 0%,
+    #10111F 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  -webkit-background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#10111F),
+    color-stop(50%, #10111F),
+    color-stop(50%, transparent),
+    to(transparent)
+  );
+  background-size: 15px;
+  background-position: center;
+  z-index: 1;
+}
+
+hr.animation::after {
+  -webkit-transition: opacity 0.3s ease, -webkit-animation 0.3s ease;
+  transition: opacity 0.3s ease, animation 0.3s ease;
+  background-image: linear-gradient(
+    to right,
+    #62EFAB 5%,
+    #F2EA7D 15%,
+    #F2EA7D 25%,
+    #FF8797 35%,
+    #FF8797 45%,
+    #E1A4F4 55%,
+    #E1A4F4 65%,
+    #82FFF4 75%,
+    #82FFF4 85%,
+    #62EFAB 95%
+  );
+  -webkit-background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(5%, #62EFAB),
+    color-stop(15%, #F2EA7D),
+    color-stop(25%, #F2EA7D),
+    color-stop(35%, #FF8797),
+    color-stop(45%, #FF8797),
+    color-stop(55%, #E1A4F4),
+    color-stop(65%, #E1A4F4),
+    color-stop(75%, #82FFF4),
+    color-stop(85%, #82FFF4),
+    color-stop(95%, #62EFAB)
+  );
+  background-size: 200%;
+  background-position: 0;
+  -webkit-animation: bar 15s linear infinite;
+  animation: bar 15s linear infinite;
+}
+
+@-webkit-keyframes bar {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes bar {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+hr.animation::before {
+  background: -webkit-gradient(linear, left top, right top, from(#10111F), color-stop(5%, #10111F), color-stop(5%, transparent), color-stop(10%, transparent), color-stop(10%, #10111F), color-stop(15%, #10111F), color-stop(15%, transparent), color-stop(20%, transparent), color-stop(20%, #10111F), color-stop(25%, #10111F), color-stop(25%, transparent), color-stop(30%, transparent), color-stop(30%, #10111F), color-stop(35%, #10111F), color-stop(35%, transparent), color-stop(40%, transparent), color-stop(40%, #10111F), color-stop(45%, #10111F), color-stop(45%, transparent), color-stop(50%, transparent), color-stop(50%, #10111F), color-stop(55%, #10111F), color-stop(55%, transparent), color-stop(60%, transparent), color-stop(60%, #10111F), color-stop(65%, #10111F), color-stop(65%, transparent), color-stop(70%, transparent), color-stop(70%, #10111F), color-stop(75%, #10111F), color-stop(75%, transparent), color-stop(80%, transparent), color-stop(80%, #10111F), color-stop(85%, #10111F), color-stop(85%, transparent), color-stop(90%, transparent), color-stop(90%, #10111F), color-stop(95%, #10111F), color-stop(95%, transparent), to(transparent));
+  background: linear-gradient(
+    90deg,
+    #10111F 0%, #10111F 5%,
+    transparent 5%, transparent 10%,
+    #10111F 10%, #10111F 15%,
+    transparent 15%, transparent 20%,
+    #10111F 20%, #10111F 25%,
+    transparent 25%, transparent 30%,
+    #10111F 30%, #10111F 35%,
+    transparent 35%, transparent 40%,
+    #10111F 40%, #10111F 45%,
+    transparent 45%, transparent 50%,
+    #10111F 50%, #10111F 55%,
+    transparent 55%, transparent 60%,
+    #10111F 60%, #10111F 65%,
+    transparent 65%, transparent 70%,
+    #10111F 70%, #10111F 75%,
+    transparent 75%, transparent 80%,
+    #10111F 80%, #10111F 85%,
+    transparent 85%, transparent 90%,
+    #10111F 90%, #10111F 95%,
+    transparent 95%, transparent 100%
+  );
+  background-size: 150px;
+  background-position: center;
+  z-index: 1;
+  -webkit-animation: bar 120s linear infinite;
+  animation: "bar" 120s linear infinite;
+}
+
+hr.animation:hover::before {
+  animation-duration: 20s;
+  -webkit-animation-duration: 20s;
+}
+
+hr.animation:hover::after {
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+}
+
+/* Sections */
+html > body > section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  border: thin dashed black;
+  border-radius: 1.5vh;
+  background-color: whitesmoke;
+}
+
+html > body > article {
+  border: thin dashed black;
+}
+
+/* Paragraphs */
+p {
+  text-indent: 2em;
+}
+
+p:first-of-type::first-letter {
+  font-size: 200%;
+}
+
+/* Blockquote */
+blockquote > p {
+  padding: 0.3em;
+  border-left: 1em solid silver;
+  color: darkgray;
+  background-color: whitesmoke;
+}
+
+blockquote > p:first-of-type {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+
+blockquote > p:first-of-type::before {
+  content: "“";
+  font-size: xx-large;
+}
+
+blockquote > p:first-of-type::after {
+  content: "”";
+  font-size: xx-large;
+}
+
+blockquote > p:last-of-type {
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+  text-align: right;
+}
+
+/* Headings */
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.4em;
+}
+
+h3 {
+  font-size: 1.92em;
+}
+
+h4 {
+  font-size: 1.536em;
+}
+
+h5 {
+  font-size: 1.2288em;
+}
+
+h6 {
+  font-size: 0.98304em;
+}
+
+
+/******************************************************* Links ********************************************************/
+a {
+  color: blue;
+  padding: 0.1em;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:focus {
+  color: red;
+  outline: thin inset red;
+}
+
+a:hover {
+  color: red;
+  outline: thin inset red;
+}
+
+a:active {
+  color: lightgreen;
+}
+
+
+/***************************************************** Text-Level *****************************************************/
+code, var, kbd, samp, tt, dir, abbr, acronym, blockquote, q, textarea, input, option {
+  hyphens: manual;
+}
+
+pre {
+  white-space: pre;
+  background-color: ghostwhite;
+}
+
+
+code, var {
+  white-space: pre;
+  font-family: "Fira Code Retina", monospace;
+
+}
+
+code {
+  overflow: scroll;
+}
+
+small {
+  font-size: xx-small;
+}
+
+
+/******************************************************* Others *******************************************************/
+.box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+label {
+  position: absolute;
+  bottom: -1.5em;
+}
+
+/* section-1 */
+.radial {
+  background-image: radial-gradient(yellow, lawngreen);
+}
+
+#ex01 {
+  height: 6em;
+  width: 20em;
+}
+
+#ex02 {
+  height: 10em;
+  width: 15em;
+}
+
+#ex03 {
+  height: 10em;
+  width: 10em;
+}
+
+#ex04 {
+  height: 15em;
+  width: 10em;
+}
+
+#ex05 {
+  height: 20em;
+  width: 6em;
+}
+
+/* section-2 */
+section:nth-of-type(2) > .box:nth-of-type(1) {
+  background-image: radial-gradient(circle, red, yellow);
+}
+
+section:nth-of-type(2) > .box:nth-of-type(2) {
+  background-image: radial-gradient(ellipse, red, yellow);
+}
+
+section:nth-of-type(2) > .box:nth-of-type(3) {
+  background-image: radial-gradient(3em, red, yellow);
+}
+
+section:nth-of-type(2) > .box:nth-of-type(4) {
+  background-image: radial-gradient(3em 6em, red, yellow);
+}

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 1vh;
+  background-image: linear-gradient(90deg, #CFA1E3, #A0A2F0);
+}
+
+html > body {
+  margin: 0;
+  padding: 1vh;
+  border-radius: 1vh;
+  background-color: rgba(243, 231, 233, 0.5);
+}
+
+html > body > hr {
+  width: 100%;
+  height: 0.3vh;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+
+/* Filling the lower-right quarter of the containing block */
+section#First > div {
+  font: bold italic x-large sans-serif;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+section#First > div#contain1 {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  background: rgba(0, 128, 216, 0.33);
+}
+
+section#First > div#contain1 > div#example1 {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  background-color: rgba(216, 128, 0, 0.67);
+}
+
+
+/* Positioning an element outside its containing block */
+section#Second > div {
+  font: bold italic x-large sans-serif;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+section#Second > div#contain2 {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background: rgba(0, 128, 216, 0.33);
+}
+
+section#Second > div#contain2 > div#example2 {
+  position: absolute;
+  top: 50%;
+  bottom: -2em;
+  left: 50%;
+  right: -7em;
+  background-color: rgba(216, 128, 0, 0.67);
+}

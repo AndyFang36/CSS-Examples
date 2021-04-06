@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+figure {
+  margin: 5em;
+  border: thin dashed greenyellow;
+}
+
+img {
+  width: 10em;
+  height: auto;
+}
+
+figure:nth-child(1) > img {
+  filter: opacity(100%);
+}
+
+figure:nth-child(2) > img {
+  filter: opacity(75%);
+}
+
+figure:nth-child(3) > img {
+  filter: opacity(0.3);
+}
+
+figure:nth-child(4) > img {
+  filter: opacity(0);
+}

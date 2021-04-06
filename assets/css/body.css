@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+body{
+  margin-top: 0.2rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: rgba(243, 231, 233, 0.5);
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Heaters";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Heaters"), url("fonts/Heaters/Heaters.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Happy Birthday";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Happy Birthday"), url("fonts/Happy Birthday/Happy Birthday.ttf") format("truetype");
+  src: local("Happy Birthday"), url("fonts/Happy Birthday/Happy Birthday.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bebas Neue"), url("fonts/Bebas Neue/Bebas Neue Regular.eot") format("embedded-opentype");
+}
+
+h1 {
+  font-size: 100px;
+  color: #FF0000;
+}
+
+#Happy_Birthday {
+  font-family: "Happy Birthday", serif;
+}
+
+#Heaters {
+  font-family: "Heaters", serif;
+}
+
+#Bebas_Neue {
+  font-family: "Bebas Neue", serif;
+}

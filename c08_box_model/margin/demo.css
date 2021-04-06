@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  padding: 0.2rem 20rem;
+  background-color: lightgray;
+}
+
+body {
+  padding: 1em;
+  background-color: whitesmoke;
+}
+
+hr{
+  margin: 3em 0;
+}
+
+/*  */
+article {
+  margin: 2em 0;
+}
+
+p {
+  background: lightblue;
+}
+
+#d02 p {
+  margin: 0;
+}
+
+
+/* section-5: negative margin */
+#section-5 {
+  width: 20em;
+  padding: 1em;
+  background-color: papayawhip;
+}
+
+#section-5 > p {
+  font-size: large;
+  background-color: transparent;
+}
+#section-5>p:nth-of-type(2){
+  margin-right: -1em;
+  background-color: whitesmoke;
+}
+
+/* section-6 */
+#section-6 > p {
+  width: 35em;
+  background-color: #6BE899;
+}
+
+#section-6 > p > strong {
+  margin: 0 2em;
+  background-color: red;
+}

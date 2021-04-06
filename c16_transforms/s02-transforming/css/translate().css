@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+div {
+  border: thin dashed red;
+  float: left;
+  position: relative;
+  margin: 60px;
+  background-color: #B4B4B7;
+}
+
+div:nth-child(6) {
+  clear: left;
+}
+
+div > img {
+  vertical-align: center;
+  opacity: 0.7;
+}
+
+div > span {
+  position: absolute;
+  top: 125%;
+  left: -25%;
+  width: 150%;
+  height: auto;
+  text-align: center;
+  white-space: pre;
+  font: 1.2em "Fira Code Retina", monospace;
+}
+
+#ex01 {
+  transform: translate(25px);
+}
+
+#ex02 {
+  transform: translate(25%);
+}
+
+#ex03 {
+  transform: translate(0, 25px);
+}
+
+#ex04 {
+  transform: translate(0, -25px);
+}
+
+#ex05 {
+  transform: translate(20%, 20%);
+}
+
+#ex06 {
+  transform: translate(-20%, -20%);
+}
+
+#ex07 {
+  transform: translate(110%, 25px);
+}
+
+#ex08 {
+  transform: translate3d(50%, 50%, 1em);
+}

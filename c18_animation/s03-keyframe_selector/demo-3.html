@@ -1,0 +1,52 @@
+<style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: white;
+  }
+
+  .box {
+    width: 10em;
+    height: 7em;
+    border: 1em solid black;
+    border-radius: 25%;
+    background-color: dodgerblue;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+  }
+
+  #box-1 {
+    animation-name: round;
+  }
+
+  #box-2 {
+    animation-name: square_to_round;
+  }
+
+  @keyframes round {
+    100% {
+      border-radius: 50%;
+    }
+  }
+
+  @keyframes square_to_round {
+    0% {
+      border-radius: 0;
+    }
+    100% {
+      border-radius: 50%;
+    }
+  }
+</style>
+
+<body>
+  <div class="box" id="box-1"></div>
+  <div class="box" id="box-2"></div>
+</body>

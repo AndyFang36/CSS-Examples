@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>text-transform</title>
+    <meta charset="UTF-8">
+    <style>
+      html {
+        background-color: dimgray;
+      }
+
+      body {
+        background-color: floralwhite;
+      }
+
+      h1 {
+        font-size: 2vw;
+        text-transform: capitalize;
+      }
+
+      p {
+        font-size: 1.5vw;
+      }
+
+      strong.uppercase {
+        text-transform: uppercase;
+        color: red;
+      }
+
+      .lowercase {
+        text-transform: lowercase;
+        color: green;
+      }
+
+      .none {
+        text-transform: none;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>The heading-one at the beginning</h1>
+      <p>
+        By default, text is displayed in the capitalization it has in the source document, but
+        <strong class="uppercase">it is possible to change this</strong> using the property 'text-transform'.
+      </p>
+      <p class="lowercase">
+        For example, one could Create TEXT such as might have been Written by the late Poet e.e.cummings.
+      </p>
+      <p class="none">
+        If you feel the need to Explicitly Declare the transformation of text to be 'none', that can be done as well.
+      </p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 25px;
+  text-align: center;
+}
+
+div {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+article {
+  position: relative;
+  width: 320px;
+}
+
+article > div {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  border: 1px dashed;
+  height: 500px;
+  background-image: repeating-linear-gradient(to bottom,
+  white 0px,
+  white 5px,
+  rgba(0, 0, 0, 0.075) 5px,
+  rgba(0, 0, 0, 0.075) 10px);
+}
+
+div > div {
+  border: 1px solid;
+  flex: 1 0 auto;
+  background-color: rgb(208, 208, 208);
+  letter-spacing: 2px;
+}
+
+.stretch {
+  flex: 0 1 0;
+}
+
+.k {
+  flex: 1 0 95%;
+}
+
+p {
+  margin: 0 -20px 40px;
+}
+
+.stretch {
+  align-self: stretch;
+  width: 1px;
+  margin-left: -2px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.stretch:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid red;
+}
+
+.e:after,
+.f:after,
+.k:after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: transparent solid 1px;
+  border-bottom: 1px solid blue;
+  height: 1.2em;
+}
+
+div[style*=stretch] div:after {
+  content: none;
+}
+
+div[style*=stretch] .f:before,
+div[style*=stretch] .k:before,
+article:last-of-type p:before {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-bottom: 1px solid blue;
+  transform: translatey(-1px);
+}
+
+.stretch:last-of-type:before,
+article:last-of-type p:before {
+  transform: translatey(-2px);
+}

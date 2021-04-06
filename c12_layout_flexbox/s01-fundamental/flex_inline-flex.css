@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  /*border: 1px dashed red;*/
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+html {
+  margin: 0;
+  padding: 1vh;
+  background-color: lightskyblue;
+}
+
+html > body {
+  margin: 0;
+  padding: 1vh;
+  border-radius: 1vh;
+  background-color: rgba(255, 255, 255, 0.64);
+}
+
+html > body > hr {
+  width: 100%;
+  height: 0.3vh;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+
+/* The box2 kinds of flex containers */
+article {
+  position: relative;
+  font-size: x-large;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+article > div {
+  padding: 1em;
+  border: 1px dashed red;
+  background-color: rgba(136, 212, 123, 0.79);
+}
+
+article > div:nth-child(odd) {
+  display: flex;
+}
+
+article > div:nth-child(even) {
+  display: inline-flex;
+}
+
+article > div > div {
+  height: auto;
+  border: 1px solid black;
+  padding: 0.5em;
+  line-height: 30px;
+  background-color: #AFA6A6;
+}
+
+article > div > div:nth-child(2) {
+  margin: 0 1em;
+}
+
+article > div > p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}

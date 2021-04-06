@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Fitting Track Contents</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="./fit-content().css"/>
+  </head>
+  <body>
+    <section id="first">
+      <h2>Sizing grid tracks with fit-content()</h2>
+      <div class="grid_container">
+        <p class="grid_item">Short content, 29 characters.</p>
+        <p class="grid_item">This is longer content, which reaches a total of 63 characters.</p>
+        <p class="grid_item">
+          This is still longer content, going on and on, causing line-wraps and the growth of the row's height as it
+          makes its way up to 151 characters in total.
+        </p>
+      </div>
+    </section>
+    <hr/>
+    <section id="second">
+      <h2>Fitting to wide content</h2>
+      <div class="grid_container">
+        <p class="grid_item">Short content, 29 characters.</p>
+        <p class="grid_item">
+          <img src="images/sheep.jpg" alt="sheep"/>
+          This is longer content, which reaches a total of 63 characters.
+        </p>
+        <p class="grid_item">
+          This is still longer content, going on and on, causing line-wraps and the growth of the row’s height as it
+          makes its way up to 151 characters in total.
+        </p>
+      </div>
+    </section>
+    <script type="text/javascript" src="#"></script>
+  </body>
+</html>

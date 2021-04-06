@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 1vh;
+  background-image: linear-gradient(90deg, #C6A5D3, #9696C8);
+}
+
+html > body {
+  margin: 0;
+  padding: 1vh;
+  border-radius: 1vh;
+  background-color: rgba(243, 231, 233, 0.5);
+}
+
+html > body > hr {
+  width: 100%;
+  height: 0.3vh;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+html > body > div {
+  color: rgb(0, 0, 0);
+  font: bold italic x-large sans-serif;
+  text-align: right;
+}
+
+
+/* Positioning and sizing an element using only the offset properties */
+div#Container1 {
+  position: relative;
+  background: rgba(1, 71, 222, 0.62);
+  height: 300px;
+  width: 500px;
+}
+
+div#Example1 {
+  position: absolute;
+  background: rgba(255, 196, 196, 0.43);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+}
+
+/* Positioning an element partially outside its containing block */
+div#Container2 {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background: rgba(12, 83, 237, 0.8);
+}
+
+div#Example2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  width: 50%;
+  height: 100%;
+  padding: 2em;
+  background: rgba(245, 211, 161, 0.64);
+}
+
+/* Setting a minimum width and height for a positioned element */
+div#Container3 {
+  position: relative;
+  background: rgba(1, 106, 219, 0.75);
+  height: 300px;
+  width: 500px;
+}
+
+div#Example3 {
+  position: absolute;
+  top: 10%;
+  bottom: 20%;
+  left: 50%;
+  right: 10%;
+  min-width: 10em;
+  min-height: 20em;
+  background: rgba(216, 128, 0, 0.5);
+}

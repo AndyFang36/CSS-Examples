@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+html {
+  background-image: linear-gradient(
+    to right,
+    #DBDCD7 0%,
+    #DDDCD7 24%,
+    #E2C9CC 30%,
+    #E7627D 46%,
+    #B8235A 59%,
+    #801357 71%,
+    #3D1635 84%,
+    #1C1A27 100%
+  );
+}
+
+body {
+  padding: 0;
+  margin: 1em;
+  width: 500px;
+  background-color: antiquewhite;
+}
+
+div {
+  width: 400px;
+}
+
+hr {
+  width: auto;
+  height: 0.1em;
+  margin: 2em auto;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+p#Positive {
+  text-indent: 3em;
+}
+
+p#Negative {
+  text-indent: -25px;
+}
+
+div p {
+  text-indent: 10%;
+}
+
+div#outer {
+  width: 500px;
+}
+
+div#inner {
+  text-indent: 10%;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  float: left;
+}

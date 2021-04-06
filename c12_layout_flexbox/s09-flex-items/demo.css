@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+body {
+  font-size: 40px;
+  text-align: center;
+}
+
+body > div {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px dashed;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body > div > div {
+  border: 1px solid;
+  padding: 0.5em;
+  height: 80px;
+  width: 80px;
+  background-color: #0ADE96;
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  background-image: linear-gradient(to bottom right, lightblue, white 50%, gold 50%, white);
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+
+/*------- comment out or edit properties below -------*/
+aside {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  border: 1px dashed red;
+  padding: 10px;
+  align-items: center;
+  line-height: 100px;
+}
+
+aside > * {
+  border: 1px solid;
+  margin: 0 10px;
+  padding: 0 10px;
+}

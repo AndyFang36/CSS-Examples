@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>text-indent</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./text-indent.css">
+  </head>
+  <body>
+    <p id="Positive">
+      This is a paragraph element, which means that the first line will be indented by 3em (i.e., three times the computed
+      <code>font-size</code> of the text in the paragraph). The other lines in the paragraph will not be indented, no matter how long the
+      paragraph may be.
+    </p>
+    <hr/>
+    <img src="./star.gif" alt="An image of a five-pointed star."/>
+    <p id="Negative">
+      This paragraph has a negatively indented first line, which overlaps the floated image that precedes the text. Subsequent lines do not
+      overlap the image, since they are not indented in any way.
+    </p>
+    <hr/>
+    <div>
+      <p>
+        This paragraph is contained inside a DIV, which is 400px wide, so the first line of the paragraph is indented 40px (400 * 10% = 40).
+        This is because percentages are computed with respect to the width of the element.
+      </p>
+    </div>
+    <hr/>
+    <div id="outer">
+      <div id="inner">
+        This first line of the DIV is indented by 50 pixels.
+        <p>
+          This paragraph is 200px wide, and the first line of the paragraph is indented 50px. This is because computed values for
+          <code>text-indent</code>are inherited, instead of the declared values.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

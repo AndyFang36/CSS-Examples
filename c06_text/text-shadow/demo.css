@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+  padding: 1em;
+  font-size: 2em;
+}
+
+p.one {
+  text-shadow: #73E6AB 5px 0.5em;
+}
+
+p.two {
+  text-shadow: rgb(46, 46, 223) -5px -0.5em;
+}
+
+p.three {
+  color: black;
+  text-shadow: gray 2px 2px 4px;
+}
+
+p.four {
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+p.five {
+  color: black;
+  text-shadow: 1em 0.5em 5px red, -0.5em -1em hsla(100, 75%, 25%, 0.33);
+}

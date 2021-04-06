@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+* {
+  border: 1px #CCCCCC solid;
+  margin: 10px;
+  padding: 10px;
+}
+
+body, nav, main, article {
+  display: flex;
+}
+
+body, article {
+  flex-direction: column;
+}
+
+article {
+  flex: 1 1 33%;
+}
+
+img {
+  height: 100px;
+  background-color: #CCCCCC;
+}
+
+p {
+  flex: 1 0 auto;
+}
+
+a{
+  text-decoration: none;
+}

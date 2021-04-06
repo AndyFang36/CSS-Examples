@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3em;
+  background-color: gray;
+}
+
+
+/* Grouping */
+body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: white;
+}
+
+hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+section {
+  width: auto;
+  height: auto;
+  margin-bottom: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Heading */
+h1 {
+  font-size: 3em
+}
+
+h2 {
+  font-size: 2.4em
+}
+
+h3 {
+  font-size: 1.92em
+}
+
+h4 {
+  font-size: 1.536em
+}
+
+h5 {
+  font-size: 1.2288em
+}
+
+h6 {
+  font-size: 0.98304em
+}
+
+
+/* Others*/
+section > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container {
+  width: auto;
+  height: auto;
+  display: grid;
+  background-image: linear-gradient(to right, #00DBDE 0%, #FC00FF 100%);
+}
+
+.container > .header {
+  grid-area: header;
+  background-color: #FF6A00;
+}
+
+.container > .left_side {
+  grid-area: left_side;
+  background-color: #1E7E34;
+}
+
+.container > .content {
+  grid-area: content;
+  background-color: #7918F2;
+}
+
+.container > .right_side {
+  grid-area: right_side;
+  background-color: #005CBF;
+}
+
+.container > .footer {
+  grid-area: footer;
+  background-color: red;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: thin dashed black;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+.item > img {
+  display: block;
+}
+
+.item > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+
+/* A simple set of grid areas */
+#section-1 > .container {
+  grid-template-areas:
+	"header    header  header  header"
+	"left_side content content right_side"
+	"left_side footer  footer  footer";;
+  grid-template-rows: repeat(3, 3em);
+}
+
+
+/* Grid cells with identifiers */
+#section-2 > .container {
+  grid-template-areas:
+	"header    header  header  header"
+	"left_side content content right_side"
+	"left_side footer  footer  footer";;
+  grid-template-rows: repeat(3, 3em);
+}
+
+
+/* A grid with some unnamed grid cells */
+#section-3 > .container {
+  grid-template-areas:
+	"header    header header header"
+	"left_side ...    ...    right_side"
+	"footer    footer footer footer";
+  grid-template-rows: repeat(3, 3em);
+}
+
+
+/* Named areas and sized tracks */
+#section-4 > .container {
+  grid-template-areas:
+	"header    header header header"
+	"left_side ...    ...    right_side"
+	"footer    footer footer footer";
+  grid-template-columns: [] 1fr [] 20em [] 20em [] 1fr [];
+  grid-template-rows:
+    []
+    40px
+    []
+    10em
+    []
+    3em
+    [];
+}
+
+
+/* Adding more tracks beyond the named areas */
+#section-5 > .container {
+  grid-template-areas:
+	"header    header header header"
+	"left_side ...    ...    right_side"
+	"footer    footer footer footer";
+  grid-template-columns: [] 1fr [] 20em [] 20em [] 1fr [] 1fr [];
+  grid-template-rows:
+    []
+    40px
+    []
+    10em
+    []
+    3em
+    []
+    20px
+    [];
+}

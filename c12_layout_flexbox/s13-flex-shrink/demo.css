@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+div {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+article {
+  width: 770px; /* book reads 750. We added 20px to allow for between item padding */
+  box-sizing: content-box;
+}
+
+article > div {
+  display: flex;
+  flex-direction: row;
+  border: 1px dashed;
+  padding: 2px;
+  min-height: 100px;
+  box-sizing: content-box;
+}
+
+div > div {
+  border: 1px solid;
+  margin: 2px; /* this makes the extra distributed space available less than 450px */
+  padding: 40px 0;
+  width: 300px;
+  font-size: 1rem;
+  box-sizing: content-box;
+}
+
+body {
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+}

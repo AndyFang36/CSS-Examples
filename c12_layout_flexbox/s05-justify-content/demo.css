@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+html {
+  background-color: dimgray;
+}
+
+body {
+  padding: 1em 30em;
+  border-radius: 0.8em;
+  background-color: whitesmoke;
+}
+
+div {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: monospace;
+}
+
+article {
+  margin-bottom: 1em;
+}
+
+article:last-of-type {
+  margin-bottom: 0;
+  max-height: 20%;
+}
+
+article > div {
+  display: flex;
+  border: 1px solid red;
+}
+
+article > div > div {
+  border: 1px solid;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 3em;
+  font-family: "Fira Code Retina", monospace;
+  line-height: 50px;
+}
+
+aside {
+  margin-top: 0;
+  color: gray;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Horizontal Formatting</title>
+    <meta name="Revised" content="Current Version: Andy, 2020.07.14"/>
+    <meta name="Generator" content="IntelliJ IDEA 2020.1.1 (Ultimate Edition)"/>
+    <meta name="Build" content="2020.07.14"/>
+    <meta name="Robots" content="All"/>
+    <meta name="Keyword" content="CSS,HTML,JS,Web"/>
+    <meta name="Description" content="This is a web page."/>
+    <meta name="Author" content="Andy"/>
+    <meta name="Reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="Copyright" content="Copyright © 2020 xxx company. All rights reserved."/>
+    <meta name="Viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <style type="text/css">
+      html {
+        margin: 0;
+        padding: 0;
+        background-color: darkgray;
+      }
+
+      body {
+        padding: 1em;
+        border-radius: 1em;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      section {
+        border-radius: 1em;
+        background-color: #E9DEFA;
+      }
+
+      hr {
+        width: 100%;
+        height: 0.3vh;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        border: 0;
+        background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+      }
+
+      /*  */
+      header {
+        width: 30em;
+        border: 2px solid gray;
+        border-bottom-width: 0;
+        margin-bottom: 2px;
+        text-align: center;
+        height: 10px;
+      }
+
+      header b {
+        font: italic 1em sans-serif;
+        padding: 0 0.33em;
+        line-height: 1px;
+        vertical-align: top;
+        background-color: white;
+      }
+
+      section#First div {
+        box-sizing: content-box;
+        width: 30em;
+        height: auto;
+        border: 3px dashed #000000;
+        background-color: #C197FF;
+      }
+
+      section#First div p {
+        box-sizing: border-box;
+        border-style: solid;
+        border-width: thin;
+        border-color: red;
+        background-color: #63E998;
+      }
+
+      section#First div p:nth-child(1) {
+        margin: 1em 1em 1em 2em;
+      }
+
+      section#First div p:nth-child(2) {
+        margin: 1em 2em 1em 1em;
+      }
+
+
+      /* Overriding the margin-right setting */
+      section#Second div {
+        margin: 0;
+        box-sizing: content-box;
+        width: 500px;
+        height: auto;
+        background-color: #B3EAAB;
+      }
+
+      section#Second div p {
+        /*
+           height: auto;
+
+
+          margin-top: 5em;*/
+        box-sizing: border-box;
+        width: 100px;
+        border-style: solid;
+        border-width: thin;
+        border-color: red;
+        margin-left: 100px;
+        margin-right: 100px;
+        text-align: center;
+        background-color: #CCCCCC;
+      }
+
+      section#Second footer:first-child {
+        margin: 0;
+        width: 500px;
+        height: 10px;
+        border: 1px solid gray;
+        text-align: center;
+        clear: both;
+      }
+
+      section#Second footer b {
+        font: italic 1em sans-serif;
+        background: white;
+        padding: 0 0.33em;
+        line-height: 1px;
+        vertical-align: top;
+      }
+
+      /*
+      section#Second footer[class] {
+        display: inline-block;
+        border-width: 0 1px;
+        height: auto;
+        box-sizing: border-box;
+        background: linear-gradient(transparent, transparent 49%, gray 49%, gray 52%, transparent 52%, transparent);
+        opacity: 0.67;
+      }
+
+      div .left {
+        width: 100px;
+        left: -1px;
+      }
+
+      div .middle {
+        width: 100px;
+        left: 99px;
+      }
+
+      div .right {
+        width: 300px;
+        left: 199px;
+      }
+
+      div footer b {
+        vertical-align: baseline;
+      }*/
+
+
+      /* Automatic width */
+      section#Third div {
+        box-sizing: content-box;
+        width: 500px;
+        height: auto;
+        margin: 1em 1em;
+        background-color: #FEFEFF;
+      }
+
+      section#Third div p {
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="First">
+      <header><b>30em</b></header>
+      <div>
+        <p style="">
+          This is a paragraph inside a div.
+        </p>
+        <p style="">
+          This is another paragraph inside a div.
+        </p>
+      </div>
+    </section>
+    <hr/>
+    <section id="Second">
+      <footer><b>500px</b></footer>
+      <div>
+        <p>a paragraph</p>
+      </div>
+      <footer class="left"><b>100px</b></footer>
+      <footer class="middle"><b>100px</b></footer>
+      <footer class="right"><b>300px</b></footer>
+    </section>
+    <hr/>
+    <section id="Third">
+      <footer></footer>
+      <div>
+        <p>a paragraph</p>
+      </div>
+    </section>
+  </body>
+</html>

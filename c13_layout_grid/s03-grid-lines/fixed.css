@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  color: #00C9FF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3em;
+  font-size: 16px;
+  background-color: gray;
+}
+
+/* grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+html > body > hr {
+  width: 100%;
+  height: 0.1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* heading */
+html > body h1 {
+  font-size: 3em
+}
+
+html > body h2 {
+  font-size: 2.4em
+}
+
+html > body h3 {
+  font-size: 1.92em
+}
+
+html > body h4 {
+  font-size: 1.536em
+}
+
+html > body h5 {
+  font-size: 1.2288em
+}
+
+html > body h6 {
+  font-size: 0.98304em
+}
+
+
+/* others */
+html > body div.grid_container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  background-color: #C1F1D6;
+}
+
+html > body div.inline-grid_container {
+  width: 100%;
+  height: auto;
+  display: inline-grid;
+  background-color: #C1F1D6;
+}
+
+.grid_item {
+  border: thin dashed red;
+}
+
+
+/* Grid-line placement */
+div#first {
+  grid-template-columns: 100px 50% 10em;
+  grid-template-rows: 5em;
+}
+
+div#first > span {
+  position: relative;
+  border: thin dashed red;
+  background-color: #9FACE6;
+}
+
+div#first > span > i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+/* Grid-name placement */
+#section-2 > .labels {
+  display: grid;
+  grid-template-columns: 10em 60% 10em 1px;
+  grid-template-rows: 4.5em;
+}
+
+#section-2 > .labels > span.label {
+  border-top: transparent;
+  border-bottom: transparent;
+  border-left: thin dotted black;
+  border-right: transparent;
+}
+
+#section-2 > .grid_container {
+  grid-template-columns: 10em 60% 10em;
+  grid-template-rows: 6em;
+}
+
+#section-2 > .grid_container > span {
+  position: relative;
+  border: thin dashed red;
+  background-color: #9FACE6;
+}
+
+#section-2 > .grid_container > span > i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+/* Creating a grid */
+#section-3 > .grid_container {
+  grid-template-columns:
+    [col-1] 5em [col-2] 5em [col-3] 15em [col-4] 5em [col-5] 1px [col-6];
+  grid-template-rows:
+    [row-1]
+    3em
+    [row-2]
+    3em
+    [row-3]
+    10em
+    [row-4]
+    2em
+    [row-5]
+    1px
+    [row-6];
+}
+
+#section-3 > .grid_container > .grid_item:first-child {
+  border: transparent;
+}
+
+#section-3 > .grid_container > .label_top {
+  border-top: transparent;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-left: thin dotted black;
+}
+
+#section-3 > .grid_container > .label_left {
+  border-top: thin dotted black;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+
+#section-3 > .grid_container > .label_right,
+#section-3 > .grid_container > .label_bottom {
+  border: transparent;
+}
+
+
+/* minmax() */
+#section-4 > .grid_container {
+  grid-template-columns:
+    [col-1] 6em [content-start] calc(100% - 12em) [content-end] 6em [col-4];
+  grid-template-rows:
+    [header-start]
+    3em
+    [header-end content-start]
+    minmax(3em, 100%)
+    [content-end footer-start]
+    3em
+    [ footer-end ];
+}

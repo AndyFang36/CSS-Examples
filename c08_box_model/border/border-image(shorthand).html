@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>border-image</title>
+    <base href="#" target="_self"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Andy"/>
+    <meta name="reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="keyword" content="HTML,CSS,JS,WEB"/>
+    <meta name="description" content="*"/>
+    <meta name="generator" content="WebStorm 2020.2"/>
+    <meta name="copyright" content="Copyright © 2020 *."/>
+    <meta http-equiv="refresh" content="*;url=#"/>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <style type="text/css">
+      html {
+        background-color: lightgray;
+        padding: 0.5em 20em;
+      }
+
+      body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 1em;
+        background-color: whitesmoke;
+      }
+
+      p {
+        flex-grow: 1;
+        margin: 1em 0;
+        font-size: xx-large;
+      }
+
+      #plaque {
+        padding: 10px;
+        border: 3px outset goldenrod;
+        background: goldenrod;
+        border-image-source: url(./images/plaque.png);
+        border-image-repeat: stretch;
+        border-image-slice: 20 fill;
+        border-image-width: 12px;
+        border-image-outset: 9px;
+      }
+
+      #oceanic {
+        border: 2px solid blue;
+        padding: 1em;
+        border-image: url(./images/waves.png) 33.33% fill / 20px / 10px round;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="plaque">Bob hope investigationes. Volutpat consectetuer cuyahoga heights shaker heights.</p>
+    <hr style="width: 95%; height: 0.1em;"/>
+    <p id="oceanic">
+      Renowned for excellence, Broadview heights adipiscing pain in proof of this, than Eros steve harvey For the tenth
+      Strongsville. Other types or even wants, but the letter luptatum Lake Erie. By James. garfield, however, the very
+      clay mathews Quod consequat lectus tincidunt nulla tation.
+    </p>
+    <script type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>text-align</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./text-align.css">
+  </head>
+  <body>
+    <div lang="en">
+      <p class="start" lang="en">
+        This paragraph is styled <code>text-align: start;</code>, which causes the line boxes within the element to line up their centers
+        with the center of the content area of the paragraph.
+      </p>
+      <p class="end" lang="en">
+        This paragraph is styled <code>text-align: end;</code>, which causes the line boxes within the element to line up their centers with
+        the center of the content area of the paragraph.
+      </p>
+      <p class="left" lang="en">
+        This paragraph is styled <code>text-align: left;</code>, which causes the line boxes within the element to line up along the left
+        inner content edge of the paragraph.
+      </p>
+      <p class="right" lang="en">
+        This paragraph is styled <code>text-align: right;</code>, which causes the line boxes within the element to line up along the right
+        inner content edge of the paragraph.
+      </p>
+      <p class="center" lang="en">
+        This paragraph is styled <code>text-align: center;</code>, which causes the line boxes within the element to line up their centers
+        with the center of the content area of the paragraph.
+      </p>
+      <p class="justify" lang="en">
+        This paragraph is styled <code>text-align: justify;</code>, which causes the line boxes within the element to line up their centers
+        with the center of the content area of the paragraph.
+      </p>
+    </div>
+    <hr/>
+    <div lang="jp">
+      <p class="left" lang="jp">このテキストは、他の手段で整列しました。</p>
+      <p class="right" lang="jp">このテキストは、他の手段で整列しました。</p>
+      <p class="center" lang="jp">このテキストは、他の手段で整列しました。</p>
+      <strong>left</strong>
+      <strong>right</strong>
+      <strong>center</strong>
+    </div>
+    <hr/>
+    <div id="start-end">
+      <p class="cl1">
+        This paragraph is start-aligned, which causes the line boxes within the element to line up along the start edge of the paragraph.
+      </p>
+      <p class="cl1" lang="ar">
+        هذه الفقرة هي بداية الانحياز، الذي يتسبب في صناديق خط داخل عنصر ليصطف على طول حافة بداية الفقرة.
+      </p>
+      <p class="cl2">
+        This paragraph is end-aligned, which causes the line boxes within the element to line up along the end edge of the paragraph.
+      </p>
+      <p class="cl2" lang="he">
+        פסקה זו היא הסוף מזדהה, מה שגורם את תיבות השורה בתוך הרכיב בשורה לאורך קצה סוף ההפסקה.
+      </p>
+    </div>
+    <hr/>
+    <table>
+      <caption>text-align-last</caption>
+      <thead>
+        <tr>
+          <th colspan="5">text-align-last</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="start">
+            This paragraph has its “last” lines aligned to the <code>start</code>.
+            This alignment will be seen immediately preceding line breaks: <br> and
+            also in the very last line of text in the paragraph, wherever that may happen to fall.
+          </td>
+          <td class="end">This paragraph has its “last” lines aligned to the <code>end</code>.
+            This alignment will be seen immediately preceding line breaks: <br>
+            and also in the very last line of text in the paragraph, wherever that may happen to fall.
+          </td>
+          <td class="left">
+            This paragraph has its “last” lines aligned to the <code>left</code>.
+            This alignment will be seen immediately preceding line breaks: <br> and
+            also in the very last line of text in the paragraph, wherever that may happen to fall.
+          </td>
+          <td class="right">
+            This paragraph has its “last” lines aligned to the <code>right</code>.
+            This alignment will be seen immediately preceding line breaks: <br> and
+            also in the very last line of text in the paragraph, wherever that may happen to fall.
+          </td>
+          <td class="center">
+            This paragraph has its “last” lines aligned to the <code>center</code>.
+            This alignment will be seen immediately preceding line breaks: <br> and
+            also in the very last line of text in the paragraph, wherever that may happen to fall.
+          </td>
+        </tr>
+        <tr>
+          <td>start</td>
+          <td>end</td>
+          <td>left</td>
+          <td>right</td>
+          <td>center</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="5">2020-07-13</td></tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

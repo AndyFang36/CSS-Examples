@@ -1,0 +1,48 @@
+<title>Valid, Invalid, Focus</title>
+
+<meta charset="utf-8"/>
+
+<style type="text/css">
+  ol, ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin: 1em;
+  }
+
+  input {
+    border: 3px solid;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 1em;
+    padding: 0.5em;
+  }
+
+  input:valid {
+    border-color: green;
+  }
+
+  input:invalid {
+    border-color: red;
+  }
+
+  input:focus {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    background-color: dodgerblue;
+  }
+</style>
+
+<ul>
+  <li>
+    <label><input type="text" pattern="valid" value="valid"/></label>
+  </li>
+  <li>
+    <label><input type="text" pattern="valid" value="invalid"/></label>
+  </li>
+  <li>
+    <label><input type="text" pattern="valid" value="autofocus" autofocus/></label>
+  </li>
+</ul>
+

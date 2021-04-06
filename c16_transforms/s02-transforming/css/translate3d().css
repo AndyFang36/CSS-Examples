@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+
+@font-face {
+}
+
+
+/**************************************************** All Elements ****************************************************/
+* {
+  /* Floating */
+  float: none;
+  clear: none;
+  shape-outside: margin-box;
+  /* Positioning */
+  position: static;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  /* Box */
+  box-sizing: content-box;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  border: 0 solid black;
+  border-radius: 0;
+  outline: 0 solid black;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  /* Text */
+  text-decoration: none;
+  text-shadow: none;
+  white-space: normal;
+  /* Color */
+  background-color: transparent;
+  /* Transforms */
+  transform: none;
+  transform-origin: 50% 50%;
+  transform-style: flat;
+  perspective: none;
+  perspective-origin: 50% 50%;
+  backface-visibility: visible;
+  /* Altering Elements */
+  filter: none;
+  mix-blend-mode: normal;
+  background-blend-mode: normal;
+  isolation: auto;
+  clip-path: none;
+  clip-rule: nonzero;
+  mask-image: none;
+  /* Others */
+  overflow: visible;
+}
+
+*::selection {
+  color: #00FFFF;
+  background-color: black;
+}
+
+
+/*************************************************** Root Element *****************************************************/
+html {
+  /* Fonts */
+  font-size: 16px;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-kerning: auto;
+  font-stretch: normal;
+  font-feature-settings: normal; /* Only for OpenType */
+  font-synthesis: none; /* Only for Firefox */
+  /* Text */
+  text-indent: 0;
+  text-align: start;
+  text-align-last: auto;
+  line-height: 1.2;
+  vertical-align: baseline;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-rendering: auto;
+  text-shadow: none;
+  white-space: normal;
+  tab-size: 2;
+  hyphens: auto;
+  word-break: normal;
+  line-break: auto; /* Only for CJK */
+  overflow-wrap: normal;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  direction: ltr; /* CSS2 */
+  unicode-bidi: normal; /* CSS2 */
+  /* Lists */
+  list-style: url("#") disc outside;
+  /* Colors / Background / Gradient */
+  color: black;
+  background-color: darkgray;
+  /* Others */
+  visibility: visible;
+  display: unset;
+}
+
+
+/*************************************** Grouping Contents *******************************************/
+html > body {
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: ghostwhite;
+}
+
+html > body hr {
+  width: auto;
+  height: 0.1em;
+  margin: 2em auto;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: lightgray;
+}
+
+html > body p {
+  text-indent: 4em;
+}
+
+html > body p:first-of-type::first-letter {
+  font-size: 200%;
+}
+
+
+/* Headings */
+html > body h1 {
+  font-size: 3em;
+}
+
+html > body h2 {
+  font-size: 2.4em;
+}
+
+html > body h3 {
+  font-size: 1.92em;
+}
+
+html > body h4 {
+  font-size: 1.536em;
+}
+
+html > body h5 {
+  font-size: 1.2288em;
+}
+
+html > body h6 {
+  font-size: 0.98304em;
+}
+
+
+/************************************************** Links *******************************************/
+/*html > body a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body a:link {
+  color: blue;
+}
+
+html > body a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body a:focus {
+  color: red;
+  outline: 0.2em inset red;
+}
+
+html > body a:hover {
+  color: red;
+  outline: 0.2em inset red;
+}
+
+html > body a:active {
+  color: lightgreen;
+}*/
+
+
+/********************************************** Text-level **********************************************/
+code, var, kbd, samp, tt, dir, abbr, acronym, blockquote, q, textarea, input, option {
+  hyphens: manual;
+}
+
+code {
+  font-family: "Fira Code Retina", monospace;
+}
+
+
+/**********************************************************************************************************************/
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: slategray;
+  border: thin solid red;
+}
+
+.box > img {
+  transform: translate3d(20%, 20%, 5em);
+}

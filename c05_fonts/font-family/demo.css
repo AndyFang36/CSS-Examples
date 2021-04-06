@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+html {
+  margin: 0;
+  padding: 0.2rem;
+  background-image: linear-gradient(to right, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+body {
+  padding: 1em;
+  border-radius: 0.8em;
+  background-color: lightgray;
+}
+
+hr {
+  width: 100%;
+  height: 0.1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  background: #333333 linear-gradient(to right, #FF0000, #00DAFF, rgb(9, 206, 91));
+}
+
+p {
+  font-size: 1em;
+}
+
+#Serif {
+  font-family: serif;
+}
+
+#Sans-serif {
+  font-family: sans-serif;
+}
+
+#Monospace {
+  font-family: monospace;
+}
+
+#Cursive {
+  font-family: cursive;
+}
+
+#Fantasy {
+  font-family: fantasy;
+}
+
+#Georgia {
+  font-family: 'Georgia';
+}
+
+#Combine1 {
+  font-family: 'Times New Roman', serif;
+}
+
+#Combine2 {
+  font-family: 'Arial Black', 'Times New Roman', 'New Century Schoolbook', 'Georgia', 'New York', serif;
+}

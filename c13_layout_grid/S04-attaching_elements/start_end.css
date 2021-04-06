@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00C9FF;
+  background-color: black;
+}
+
+html {
+  padding: 0.3em;
+  font-size: 16px;
+  background-image: linear-gradient(90deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+/* Grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  width: auto;
+  height: auto;
+  margin-bottom: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+  background-color: #C9C9C9;
+}
+
+/* Heading */
+html > body h1 {
+  font-size: 3em
+}
+
+html > body h2 {
+  font-size: 2.4em
+}
+
+html > body h3 {
+  font-size: 1.92em
+}
+
+html > body h4 {
+  font-size: 1.536em
+}
+
+html > body h5 {
+  font-size: 1.2288em
+}
+
+html > body h6 {
+  font-size: 0.98304em
+}
+
+/* Link */
+html > body a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body a:link {
+  color: blue;
+}
+
+html > body a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body a:focus {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:hover {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:active {
+  color: lightgreen;
+}
+
+/* Others*/
+html > body > section > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+html > body .container {
+  width: auto;
+  height: 10rem;
+  display: grid;
+  background-image: linear-gradient(to right, #00DBDE 0%, #FC00FF 100%);
+}
+
+html > body .container > .item {
+  position: relative;
+  border: thin dashed black;
+  background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+html > body .container > .item > img {
+  display: block;
+}
+
+html > body .container > .item > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+html > body .container > span[class*="box"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0.5em solid;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+
+/* Attaching elements to grid lines */
+#section-1 > .container {
+  width: 50em;
+  height: 25em;
+  margin: auto;
+  grid-template-columns: repeat(10, 5em);
+  grid-template-rows: repeat(5, 5em);
+}
+
+#section-1 > .container > .box-1 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  color: red;
+}
+
+#section-1 > .container > .box-2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 5;
+  grid-column-end: 10;
+  color: green;
+}
+
+#section-1 > .container > .box-3 {
+  grid-row-start: 4;
+  grid-column-start: 6;
+  color: blue;
+}
+
+
+/* Spanning grid lines */
+#section-2 > .container {
+  width: auto;
+  height: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 5em);
+}
+
+#section-2 > .container > .box-1 {
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-column-end: span 2;
+  color: red;
+}
+
+#section-2 > .container > .box-2 {
+  grid-row-start: 2;
+  grid-column-start: span 2;
+  grid-column-end: 3;
+  color: green;
+}
+
+#section-2 > .container > .box-3 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: span 5;
+  color: blue;
+}
+
+#section-2 > .container > .box-4 {
+  grid-row-start: 4;
+  grid-column-start: span 1;
+  grid-column-end: 5;
+  color: yellow;
+}
+
+
+/* Attaching elements to named grid lines */
+#section-3 > .container {
+  width: auto;
+  height: auto;
+  grid-template-columns: 2em repeat(5, [col-A] 1fr [col-B] 1fr) 2em;
+  grid-template-rows: repeat(5, [R] 5em);
+}
+
+#section-3 > .container > .box-1 {
+  grid-row-start: R 2;
+  grid-row-end: 5;
+  grid-column-start: col-B;
+  grid-column-end: span 2;
+  color: red;
+}
+
+#section-3 > .container > .box-2 {
+  grid-row-start: R;
+  grid-row-end: span R 2;
+  grid-column-start: col-A 3;
+  grid-column-end: span col-A 2;
+  color: green;
+}
+
+#section-3 > .container > .box-3 {
+  grid-row-start: 4;
+  grid-column-start: col-A -2;
+  color: blue;
+}
+
+
+/* Another way of attaching elements to named grid lines */
+#section-4 > .container {
+  width: auto;
+  height: auto;
+  grid-template-rows:
+    []
+    5em
+    []
+    10em
+    []
+    3em
+    [];
+  grid-template-columns: repeat(4, [] 1fr);
+  grid-template-areas:
+    "masthead masthead masthead masthead"
+    "sidebar  main     main     navbar"
+    "sidebar  footer   footer   footer";
+}
+
+#section-4 > .container > .masthead {
+  grid-row: masthead;
+  grid-column: masthead / masthead;
+  font-size: 2em;
+  color: red;
+}
+
+#section-4 > .container > .sidebar {
+  grid-row: 2 / 4; /* sidebar */
+  grid-column: sidebar / span 1;
+  font-size: 4em;
+  color: #FF6A00;
+}
+
+#section-4 > .container > .main {
+  grid-row: main / main;
+  grid-column: main;
+  font-size: 5em;
+  color: #63C686;
+}
+
+#section-4 > .container > .navbar {
+  grid-row: navbar / 3;
+  grid-column: navbar;
+  font-size: 3.5em;
+  color: #6BA1DE;
+}
+
+#section-4 > .container > .footer {
+  grid-row: 3 / span 1; /* footer */
+  grid-column: footer / footer;
+  font-size: 1em;
+  color: yellow;
+}

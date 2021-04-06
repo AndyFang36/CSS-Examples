@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>UI-State Pseudo-Class Selector</title>
+    <base href="#" target="_self"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Andy"/>
+    <meta name="reply-to" content="andyontheway666@outlook.com"/>
+    <meta name="keyword" content="*, *, *"/>
+    <meta name="description" content="*"/>
+    <meta name="generator" content="WebStorm 2020.2"/>
+    <meta name="copyright" content="Copyright © 2020 *."/>
+    <meta http-equiv="refresh" content="*;url=#"/>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      html {
+        padding: 0.5rem;
+        background-color: gray;
+      }
+
+      body {
+        padding: 1rem;
+        border-radius: 0.4rem;
+        background-color: antiquewhite;
+      }
+
+      hr {
+        margin: 3em auto;
+      }
+
+
+      /* :enabled & :disabled */
+      *:enabled {
+        font-weight: bold;
+      }
+
+      *:disabled {
+        opacity: 0.5;
+      }
+
+
+      /*  :checked */
+      *:checked {
+        color: lawngreen;
+        background: lawngreen;
+      }
+
+
+      /* :indeterminate */
+      .indeterminate {
+        border: 2px solid red;
+      }
+
+
+      /* :default */
+      [type="checkbox"]:default + label {
+        font-style: italic;
+      }
+
+
+      /* :required & :optional */
+      input:required {
+        border: thin solid #FF0000;
+      }
+
+      input:optional {
+        border: thin solid #CCCCCC;
+      }
+
+
+      /* :valid & :invalid */
+      input[type="email"]:focus {
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+      }
+
+      input[type="email"]:focus:invalid {
+        background-image: url("./image/false.jpg");
+      }
+
+      input[type="email"]:focus:valid {
+        background-image: url("./image/correct.jfif");
+      }
+
+
+      /* :in-range & :out-of-range */
+      input[type="number"]:focus {
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+      }
+
+      input[type="number"]:focus:out-of-range {
+        background-color: red;
+      }
+
+      input[type="number"]:focus:in-range {
+        background-color: lawngreen;
+      }
+
+      input[type="number"]:invalid {
+        color: red;
+      }
+
+      input[type="number"]:in-range {
+        font-weight: bold;
+      }
+
+
+      /* :read-write & :read-only */
+      pre:read-only,
+      textarea:read-only {
+        opacity: 0.65;
+      }
+
+      pre:read-write:hover {
+        outline: thin dashed green;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form-1">
+      <table>
+        <tr>
+          <th>Name</th>
+          <td><label><input type="text" value="your full name"></label></td>
+        </tr>
+        <tr>
+          <th>Title</th>
+          <td><label><input type="text" value="your job title"></label></td>
+        </tr>
+        <tr>
+          <th>E-mail</th>
+          <td><label><input type="text" value="valid email only please" disabled></label></td>
+        </tr>
+      </table>
+    </form>
+    <hr/>
+    <form id="form-2">
+      <table>
+        <tr>
+          <th>Rating</th>
+          <td>
+            <label><input type="radio" name="rating1">1</label>
+            <label><input type="radio" name="rating1">2</label>
+            <label><input type="radio" name="rating1" checked>3</label>
+            <label><input type="radio" name="rating1">4</label>
+            <label><input type="radio" name="rating1" class="indeterminate">5</label>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <hr/>
+    <form>
+      <input type="checkbox" id="chbx" checked name="foo" value="bar">
+      <label for="chbx">This was checked on page load</label>
+    </form>
+    <hr/>
+    <form>
+      <label><input type="email" placeholder="enter an email address" required></label>
+      <label><input type="email" placeholder="optional email address"></label>
+      <label><input type="email" placeholder="optional email address" required="false"></label>
+    </form>
+    <hr/>
+    <form>
+      <label>e-mail: <input type="email"/></label>
+      <label>e-mail: <input type="email" required/></label>
+    </form>
+    <hr/>
+    <form>
+      <label>
+        Age:&nbsp;
+        <input id="nickels" type="number" min="0" max="200" required/>
+      </label>
+      <br/><br/>
+      <label>
+        Others:&nbsp;
+        <input id="by-tens" type="number" min="0" max="1000" step="10" value="23"/>
+      </label>
+    </form>
+    <hr/>
+    <form>
+      <label>Tell us:&nbsp;<textarea></textarea></label><br/>
+      <label>Tell us:&nbsp;<textarea disabled></textarea></label>
+      <pre>Type your own code!</pre>
+      <pre contenteditable>Type your own code!</pre>
+    </form>
+    <script type="text/javascript" src=""></script>
+  </body>
+</html>
+
+
+<!--------------------------------------------------------------------------------------------------
+:enabled
+:disabled
+          Refers to user-interface elements (such as form elements) that are enabled/disabled; that
+          is, (not) available for input.
+
+:checked
+         Refers to radio buttons or checkboxes that have been selected, either by the user or by
+         defaults within the document itself.
+
+:indeterminate
+               Refers to radio buttons or checkboxes that are neither checked nor unchecked; this
+               state can only be set via DOM scripting, and not due to user input.
+
+:default
+         Refers to the radio button, checkbox, or option that was selected by default.
+
+:valid
+:invalid
+         Refers to a user input that (does not) meet all of its data validity semantics.
+
+:in-range
+          Refers to a user input whose value is between the minimum and maximum values.
+
+:out-of-range
+              Refers to a user input whose value is below the minimum or above the maximum values
+              allowed by the control.
+
+:required
+:optional
+          Refers to a user input that must/does not need to have a value set.
+
+:read-write
+:read-only
+           Refers to a user input that is (not) editable by the user.
+--------------------------------------------------------------------------------------------------->

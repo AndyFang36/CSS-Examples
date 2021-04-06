@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>vertical-align</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./vertical-align.css">
+  </head>
+  <body>
+    <p id="baseline">
+      The image found in this paragraph <img src="./bg.jpg" alt="An image."/> has its
+      bottom edge aligned with the <span>baseline</span> of the text in the paragraph.
+    </p>
+    <hr/>
+    <p id="super_sub">
+      This paragraph contains <span class="raise">superscripted</span>
+      and <span class="lower">subscripted</span> text.
+    </P>
+    <hr/>
+    <p id="bottom_text-bottom">
+      This paragraph, as you can see quite clearly, contains
+      an <img src="./bg.jpg" alt="bottom" id="bottom"/> image and
+      an <img src="./bg.jpg" alt="text-bottom" id="text-bottom"/> image,
+      and then some text which is not tall.
+    </p>
+    <hr/>
+    <p id="top">
+      Here: a <img src="./bg.jpg" alt="tall image"> tall image, and then
+      <span class="up">some text</span> that's been vertically aligned.
+    </p>
+    <p id="text-up">
+      Here: an <img src="./bg.jpg" class="text-up" alt="tall"> image that's been vertically aligned,
+      and then <span class="text-up">some text</span> that's similarly aligned.
+    </p>
+    <hr/>
+    <p id="middle">
+      Here <img src="bg.jpg" alt="an image"> is an image.
+    </p>
+    <hr/>
+    <p id="percentage">
+      We can either <sup>soar to new heights</sup> or , instead, <sub>sink into despair...</sub>
+    </p>
+    <hr/>
+    <p id="length">
+      This paragraph has a lot of text to be displayed, and a part of that text is some
+      <span>nicely bold text</span> which is raised up to 100%. This makes it look as though
+      the bold text is part of its own line of text, when in fact the line in which is sits
+      is simply much taller than usual.
+    </p>
+  </body>
+</html>

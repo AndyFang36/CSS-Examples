@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+figure {
+  margin: 3em;
+}
+
+img {
+  width: 10em;
+  height: auto;
+}
+
+img#original {
+  filter: blur(0);
+}
+
+img#blur_1px {
+  filter: blur(1px);
+}
+
+img#blur_1em {
+  filter: blur(1em);
+}

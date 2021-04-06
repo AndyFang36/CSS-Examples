@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: content-box;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana Pro Cond Semibold", sans-serif;
+  background-color: transparent;
+}
+
+*::selection {
+  color: #00C9FF;
+  background-color: black;
+}
+
+html {
+  margin: 0;
+  padding: 0.3em;
+  background-image: linear-gradient(90deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+/* Grouping */
+html > body {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.15em 0.15em 0.15em gray;
+  background-color: white;
+}
+
+html > body hr {
+  width: 100%;
+  height: 0.13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+html > body section {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1vh;
+  border-radius: 1.5vh;
+}
+
+/* Heading */
+html > body h1 {
+  font-size: 3em
+}
+
+html > body h2 {
+  font-size: 2.4em
+}
+
+html > body h3 {
+  font-size: 1.92em
+}
+
+html > body h4 {
+  font-size: 1.536em
+}
+
+html > body h5 {
+  font-size: 1.2288em
+}
+
+html > body h6 {
+  font-size: 0.98304em
+}
+
+/* Link */
+html > body a {
+  color: blue;
+  padding: 0.1em;
+}
+
+html > body a:link {
+  color: blue;
+}
+
+html > body a:visited {
+  color: gray;
+  border: 0.2em dotted gray;
+  border-radius: 0.1em;
+}
+
+html > body a:focus {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:hover {
+  color: red;
+  border: 0.2em inset red;
+}
+
+html > body a:active {
+  color: lightgreen;
+}
+
+/* Others */
+html > body > section > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+html > body .container {
+  width: auto;
+  height: auto;
+  display: grid;
+  background-image: linear-gradient(to right, #00DBDE 0%, #FC00FF 100%);
+}
+
+html > body .container > .item {
+  position: relative;
+  border: thin dashed black;
+  background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+html > body .container > .item > img {
+  display: block;
+}
+
+html > body .container > .item > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+html > body .container > span[class*="box"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0.5em solid;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+
+/* Attaching to implicit grid lines via grid-area names */
+section > .container {
+  grid-template-areas:
+    "header  header  header"
+    "navbar content sidebar"
+    "footer  footer  footer";
+  grid-template-rows:
+    []
+    5em
+    []
+    10em
+    []
+    4em
+    [];
+  grid-template-columns: [] 1fr [] 2fr [] 1fr [];
+}
+
+section > .container > .header {
+  grid-row: header / header;
+  grid-column: header;
+}
+
+section > .container > .sidebar {
+  grid-row: sidebar /sidebar;
+  grid-column: sidebar / sidebar;
+}
+
+section > .container > .content {
+  grid-row: content / content;
+  grid-column: content / content;
+}
+
+section > .container > .footer {
+  grid-row: footer;
+  grid-column: footer-start / footer-end;
+}
