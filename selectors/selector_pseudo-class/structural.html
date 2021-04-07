@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href=""/>
     <style type="text/css">
       hr {
+        box-sizing: border-box;
         margin: 2em auto;
         background-color: lightslategray;
       }
@@ -58,7 +59,7 @@
 
       /* :first-child & :last-child */
       #article-1 > p:first-child {
-        font-weight: bold;
+        color: red;
       }
 
       #article-1 > ul > li:first-child {
@@ -176,8 +177,10 @@
     </article>
     <hr/>
     <article id="article-1">
+      <section>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</section>
       <p>These are the necessary steps:</p>
       <ul>
+        <span>xxxxxxxxx</span>
         <li>Insert key</li>
         <li>Turn key <strong>clockwise</strong></li>
         <li>Push accelerator</li>
