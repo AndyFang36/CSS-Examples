@@ -1,0 +1,9 @@
+html{
+    background-color: orange;
+}
+
+body{
+    background-color: lightblue;
+    border: medium solid black;
+    height: 50vh;
+}
