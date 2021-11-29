@@ -15,7 +15,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta http-equiv="Refresh" content="60;url=#"/>
-    <style type="text/css">
+    <style>
       body {
         display: flex;
         justify-content: center;
@@ -71,6 +71,14 @@
         margin: 0 1em;
         font-style: normal;
       }
+
+      #Image{
+          border: medium dashed red;
+          border-radius: 1rem;
+      }
+      #Image img{
+          border-radius: inherit;
+      }
     </style>
   </head>
   <body>
@@ -89,6 +97,10 @@
       border-style: dashed solid double groove;
        border-radius: 1em;
        background-color: lightgreen">
+    </div>
+    <hr/>
+    <div id="Image">
+      <img src="images/bg.jpg" width="256" alt="..." title="border-radius: inherit;">
     </div>
   </body>
 </html>
