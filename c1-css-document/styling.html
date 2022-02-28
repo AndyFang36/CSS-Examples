@@ -4,8 +4,10 @@
     <meta charset="UTF-8"/>
     <title>Bringing CSS and HTML together</title>
     <link rel="stylesheet" type="text/css" href="sheet1.css" media="all"  onload="sheetLoaded()" onerror="sheetError()"/>
+    <link rel="alternate stylesheet" title="Big Text" type="text/css" href="big-text.css" media="all"  onload="sheetLoaded()" onerror="sheetError()"/>
+    <link rel="alternate stylesheet" title="Crazy Color" type="text/css" href="crazy-color.css" media="all"  onload="sheetLoaded()" onerror="sheetError()"/>
     <style media="all">
-      @import url("style1.css");
+      @import url("default.css");
       /* These are my styles! Yay! */
       body {
           width: 42em;
