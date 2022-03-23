@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Navigator</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href='navigator.css'/>
+  </head>
+  <body>
+    <nav id="navigator">
+      <a class="inactive" href="https://www.apple.com" target="_blank">Home</a>
+      <a class="inactive" href="https://www.apple.com" target="_blank">About</a>
+      <a class="active" href="https://www.apple.com" target="_blank">Blog</a>
+      <a class="inactive" href="https://www.apple.com" target="_blank">Careers</a>
+      <a class="inactive" href="https://www.apple.com" target="_blank">Contact Us</a>
+    </nav>
+    <script type="text/javascript">
+        window.onload = function() {
+            let nav = document.getElementById('navigator');
+            let activeAnchor = nav.getElementsByClassName('active');
+            for(let i = 0; i < nav.length; i++) {
+                let anchor = nav[i];
+                anchor.onclick = function() {
+                    if(anchor.className === 'inactive') {
+                        activeAnchor.className = 'inactive';
+                        anchor.className = 'active';
+                        activeAnchor = anchor;
+                    }
+                }
+            }
+        }
+    </script>
+  </body>
+</html>
