@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/css-examples/static/css/main.e6c13ad2.css",
-    "main.js": "/css-examples/static/js/main.8a044374.js",
-    "static/js/787.0cfd34f2.chunk.js": "/css-examples/static/js/787.0cfd34f2.chunk.js",
-    "index.html": "/css-examples/index.html",
-    "main.e6c13ad2.css.map": "/css-examples/static/css/main.e6c13ad2.css.map",
-    "main.8a044374.js.map": "/css-examples/static/js/main.8a044374.js.map",
-    "787.0cfd34f2.chunk.js.map": "/css-examples/static/js/787.0cfd34f2.chunk.js.map"
+    "main.css": "https://andyfang36.github.io/css-examples/static/css/main.e6c13ad2.css",
+    "main.js": "https://andyfang36.github.io/css-examples/static/js/main.132f93f1.js",
+    "static/js/787.0cfd34f2.chunk.js": "https://andyfang36.github.io/css-examples/static/js/787.0cfd34f2.chunk.js",
+    "index.html": "https://andyfang36.github.io/css-examples/index.html",
+    "main.e6c13ad2.css.map": "https://andyfang36.github.io/css-examples/static/css/main.e6c13ad2.css.map",
+    "main.132f93f1.js.map": "https://andyfang36.github.io/css-examples/static/js/main.132f93f1.js.map",
+    "787.0cfd34f2.chunk.js.map": "https://andyfang36.github.io/css-examples/static/js/787.0cfd34f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.8a044374.js"
+    "static/js/main.132f93f1.js"
   ]
 }
