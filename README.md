@@ -8,4 +8,4 @@ Hope you like them!🖥️🛠️🛠️🛠️
 
 -----------------------------------------------------------------
 
-<a href="https://andyfang36.github.io/css-examples/">See Live Demo<a/>
+<a href="https://andyfang36.github.io/css-examples/" target="_blank">See Live Demo<a/>
